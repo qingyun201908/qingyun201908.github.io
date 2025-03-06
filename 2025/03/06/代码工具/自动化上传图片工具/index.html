@@ -19,22 +19,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.22.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+    <meta name="description" content="自动化 Markdown 图片上传到 GitHub1. 代码介绍本代码用于自动扫描指定目录下的 Markdown 文章，提取其中的本地图片，并上传到 GitHub 仓库，最后替换文章中的图片路径，实现图片的托管和访问加速。 2. 主要功能 读取本地配置文件，加载 GitHub Token 扫描 Markdown 文章，查找本地图片 判断图片是否已处理，避免重复上传 将图片上传到 GitHub 指定">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自动化图床工具使用文档">
+<meta property="og:url" content="http://example.com/2025/03/06/%E4%BB%A3%E7%A0%81%E5%B7%A5%E5%85%B7/%E8%87%AA%E5%8A%A8%E5%8C%96%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E5%B7%A5%E5%85%B7/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="自动化 Markdown 图片上传到 GitHub1. 代码介绍本代码用于自动扫描指定目录下的 Markdown 文章，提取其中的本地图片，并上传到 GitHub 仓库，最后替换文章中的图片路径，实现图片的托管和访问加速。 2. 主要功能 读取本地配置文件，加载 GitHub Token 扫描 Markdown 文章，查找本地图片 判断图片是否已处理，避免重复上传 将图片上传到 GitHub 指定">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://raw.githubusercontent.com/qingyun201908/qingyun201908.github.io/images/images/%E8%87%AA%E5%8A%A8%E5%8C%96%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E5%B7%A5%E5%85%B7/image.png">
+<meta property="article:published_time" content="2025-03-06T23:32:53.000Z">
+<meta property="article:modified_time" content="2025-03-06T15:51:32.158Z">
 <meta property="article:author" content="Qing Yun">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/qingyun201908/qingyun201908.github.io/images/images/%E8%87%AA%E5%8A%A8%E5%8C%96%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E5%B7%A5%E5%85%B7/image.png">
 
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2025/03/06/%E4%BB%A3%E7%A0%81%E5%B7%A5%E5%85%B7/%E8%87%AA%E5%8A%A8%E5%8C%96%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E5%B7%A5%E5%85%B7/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"en","comments":"","permalink":"","path":"index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2025/03/06/%E4%BB%A3%E7%A0%81%E5%B7%A5%E5%85%B7/%E8%87%AA%E5%8A%A8%E5%8C%96%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E5%B7%A5%E5%85%B7/","path":"2025/03/06/代码工具/自动化上传图片工具/","title":"自动化图床工具使用文档"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Hexo</title>
+<title>自动化图床工具使用文档 | Hexo</title>
   
 
 
@@ -64,7 +70,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Hexo</h1>
+      <p class="site-title">Hexo</p>
       <i class="logo-line"></i>
     </a>
   </div>
@@ -86,7 +92,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -99,6 +105,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E5%8C%96-Markdown-%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E5%88%B0-GitHub"><span class="nav-number">1.</span> <span class="nav-text">自动化 Markdown 图片上传到 GitHub</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E4%BB%A3%E7%A0%81%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.1.</span> <span class="nav-text">1. 代码介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD"><span class="nav-number">1.2.</span> <span class="nav-text">2. 主要功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90"><span class="nav-number">1.3.</span> <span class="nav-text">3. 代码解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86"><span class="nav-number">1.3.1.</span> <span class="nav-text">3.1 配置文件管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE%E9%A1%B9"><span class="nav-number">1.3.2.</span> <span class="nav-text">3.2 全局配置项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86%E7%AE%A1%E7%90%86"><span class="nav-number">1.3.3.</span> <span class="nav-text">3.3 文件处理管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-1-FileProcessor-%E7%B1%BB"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">3.3.1 FileProcessor 类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-2-%E8%AE%A1%E7%AE%97%E6%96%87%E4%BB%B6%E5%93%88%E5%B8%8C%E5%80%BC"><span class="nav-number">1.3.3.2.</span> <span class="nav-text">3.3.2 计算文件哈希值</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-%E6%96%87%E7%AB%A0%E5%A4%84%E7%90%86"><span class="nav-number">1.3.4.</span> <span class="nav-text">3.4 文章处理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-1-ArticleProcessor-%E7%B1%BB"><span class="nav-number">1.3.4.1.</span> <span class="nav-text">3.4.1 ArticleProcessor 类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-2-%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E5%88%B0-GitHub"><span class="nav-number">1.3.4.2.</span> <span class="nav-text">3.4.2 上传图片到 GitHub</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-%E8%BF%90%E8%A1%8C%E4%B8%BB%E7%A8%8B%E5%BA%8F"><span class="nav-number">1.3.5.</span> <span class="nav-text">3.5 运行主程序</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E8%BF%90%E8%A1%8C%E6%96%B9%E5%BC%8F"><span class="nav-number">1.4.</span> <span class="nav-text">4. 运行方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E6%80%BB%E7%BB%93"><span class="nav-number">1.5.</span> <span class="nav-text">5. 总结</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -138,16 +145,17 @@
 
     </div>
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2025/03/06/%E4%BB%A3%E7%A0%81%E5%B7%A5%E5%85%B7/%E8%87%AA%E5%8A%A8%E5%8C%96%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E5%B7%A5%E5%85%B7/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -161,13 +169,13 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="name" content="自动化图床工具使用文档 | Hexo">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/03/06/%E4%BB%A3%E7%A0%81%E5%B7%A5%E5%85%B7/%E8%87%AA%E5%8A%A8%E5%8C%96%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E5%B7%A5%E5%85%B7/" class="post-title-link" itemprop="url">自动化图床工具使用文档</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          自动化图床工具使用文档
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -190,8 +198,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="自动化-Markdown-图片上传到-GitHub"><a href="#自动化-Markdown-图片上传到-GitHub" class="headerlink" title="自动化 Markdown 图片上传到 GitHub"></a>自动化 Markdown 图片上传到 GitHub</h1><h2 id="1-代码介绍"><a href="#1-代码介绍" class="headerlink" title="1. 代码介绍"></a>1. 代码介绍</h2><p>本代码用于自动扫描指定目录下的 Markdown 文章，提取其中的本地图片，并上传到 GitHub 仓库，最后替换文章中的图片路径，实现图片的托管和访问加速。</p>
+    <div class="post-body" itemprop="articleBody"><h1 id="自动化-Markdown-图片上传到-GitHub"><a href="#自动化-Markdown-图片上传到-GitHub" class="headerlink" title="自动化 Markdown 图片上传到 GitHub"></a>自动化 Markdown 图片上传到 GitHub</h1><h2 id="1-代码介绍"><a href="#1-代码介绍" class="headerlink" title="1. 代码介绍"></a>1. 代码介绍</h2><p>本代码用于自动扫描指定目录下的 Markdown 文章，提取其中的本地图片，并上传到 GitHub 仓库，最后替换文章中的图片路径，实现图片的托管和访问加速。</p>
 <h2 id="2-主要功能"><a href="#2-主要功能" class="headerlink" title="2. 主要功能"></a>2. 主要功能</h2><ul>
 <li>读取本地配置文件，加载 GitHub Token</li>
 <li>扫描 Markdown 文章，查找本地图片</li>
@@ -240,7 +247,6 @@
 <h2 id="5-总结"><a href="#5-总结" class="headerlink" title="5. 总结"></a>5. 总结</h2><p>本代码通过解析 Markdown 文件，自动上传本地图片到 GitHub，并更新文章内容，使得图片可以通过 GitHub 进行托管，适用于 Hexo 或 Jekyll 博客的自动化部署。</p>
 <p><img src="https://raw.githubusercontent.com/qingyun201908/qingyun201908.github.io/images/images/%E8%87%AA%E5%8A%A8%E5%8C%96%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E5%B7%A5%E5%85%B7/image.png" alt="alt text"></p>
 
-      
     </div>
 
     
@@ -248,192 +254,22 @@
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/03/05/%E6%97%B6%E9%97%B4%E6%B5%81%E9%80%9D/%E8%B7%AF%E4%B8%8E%E5%B7%B1-%E6%AD%A3%E4%B8%80%E9%BE%99%E8%99%8E%E5%B1%B1%E5%A4%A9%E5%B8%88%E5%BC%A0%E4%B9%8B%E7%BB%B4/" rel="prev" title="路与己-正一龙虎山天师张之维">
+                  <i class="fa fa-angle-left"></i> 路与己-正一龙虎山天师张之维
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
     </footer>
   </article>
 </div>
 
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2025/03/05/%E6%97%B6%E9%97%B4%E6%B5%81%E9%80%9D/%E8%B7%AF%E4%B8%8E%E5%B7%B1-%E6%AD%A3%E4%B8%80%E9%BE%99%E8%99%8E%E5%B1%B1%E5%A4%A9%E5%B8%88%E5%BC%A0%E4%B9%8B%E7%BB%B4/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Qing Yun">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Hexo">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/03/05/%E6%97%B6%E9%97%B4%E6%B5%81%E9%80%9D/%E8%B7%AF%E4%B8%8E%E5%B7%B1-%E6%AD%A3%E4%B8%80%E9%BE%99%E8%99%8E%E5%B1%B1%E5%A4%A9%E5%B8%88%E5%BC%A0%E4%B9%8B%E7%BB%B4/" class="post-title-link" itemprop="url">路与己-正一龙虎山天师张之维</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2025-03-05 23:25:13" itemprop="dateCreated datePublished" datetime="2025-03-05T23:25:13+00:00">2025-03-05</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2025-03-06 15:51:32" itemprop="dateModified" datetime="2025-03-06T15:51:32+00:00">2025-03-06</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%97%B6%E9%97%B4%E6%B5%81%E9%80%9D/" itemprop="url" rel="index"><span itemprop="name">时间流逝</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="路与己"><a href="#路与己" class="headerlink" title="路与己"></a>路与己</h3><p>张之维：脚在你身上长着，走不走，走哪条路，走什么样的路，做不做人，做什么样的人，亦是如此。</p>
-<p>夏禾：太多时候，你我的模样是别人决定的。</p>
-<p>张之维：是啊！想走的路不好走，想做人不好做。都说是身不由己，那不是废话嘛，己不由心，身又岂能由己。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/13/%E6%97%B6%E9%97%B4%E6%B5%81%E9%80%9D/%E5%86%99%E5%9C%A8%E6%97%B6%E9%97%B4%E4%B9%8B%E5%A4%96%E7%9A%84%E5%BE%80%E4%BA%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Qing Yun">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Hexo">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/12/13/%E6%97%B6%E9%97%B4%E6%B5%81%E9%80%9D/%E5%86%99%E5%9C%A8%E6%97%B6%E9%97%B4%E4%B9%8B%E5%A4%96%E7%9A%84%E5%BE%80%E4%BA%8B/" class="post-title-link" itemprop="url">写在时间之外的往事</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-12-13 10:48:02" itemprop="dateCreated datePublished" datetime="2021-12-13T10:48:02+00:00">2021-12-13</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2025-03-06 15:51:32" itemprop="dateModified" datetime="2025-03-06T15:51:32+00:00">2025-03-06</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%97%B6%E9%97%B4%E6%B5%81%E9%80%9D/" itemprop="url" rel="index"><span itemprop="name">时间流逝</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%97%B6%E9%97%B4%E6%B5%81%E9%80%9D/%E8%BF%87%E5%BE%80/" itemprop="url" rel="index"><span itemprop="name">过往</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="写在生活之外的往事"><a href="#写在生活之外的往事" class="headerlink" title="写在生活之外的往事"></a>写在生活之外的往事</h3><h4 id="一：为什么不想考研"><a href="#一：为什么不想考研" class="headerlink" title="一：为什么不想考研"></a>一：为什么不想考研</h4><p>没有能力，没有热情，很多时候都不知道自己想去做什么，只是浑浑噩噩的过日子。</p>
-<h4 id="二：对不起的人"><a href="#二：对不起的人" class="headerlink" title="二：对不起的人"></a>二：对不起的人</h4><p>于父母有愧，二老对我没太大要求，只是渴望我有更好的发展，不被人欺负，不受气</p>
-<h4 id="三：担心害怕的事情"><a href="#三：担心害怕的事情" class="headerlink" title="三：担心害怕的事情"></a>三：担心害怕的事情</h4><p>害怕对不起父母，但是自己又不愿意去承担，假如亲近之人生病，我又该怎么办？没钱，没能力。</p>
-<h4 id="四：对待社会"><a href="#四：对待社会" class="headerlink" title="四：对待社会"></a>四：对待社会</h4><p>不怎么喜欢、社会千奇百怪，光怪陆离，就像在地狱一样。</p>
-<h4 id="五：为什么写这些？"><a href="#五：为什么写这些？" class="headerlink" title="五：为什么写这些？"></a>五：为什么写这些？</h4><p>我没抑郁症，也没想不开，只是记录下，想着一些事情，就在这里留下！</p>
-<h4 id="六：想着依年为单位去完成一些东西"><a href="#六：想着依年为单位去完成一些东西" class="headerlink" title="六：想着依年为单位去完成一些东西"></a>六：想着依年为单位去完成一些东西</h4><p>时间不等人，落叶于枫树飘零，但不知以年为单位的任务，是否能带来改变</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
 
 
 
