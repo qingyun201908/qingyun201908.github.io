@@ -1851,7 +1851,7 @@ print(f"合并完成：{output_file}")
 ## 注意事项
 - 确保所有视频文件格式相同，以避免合并时出现问题。
 - 处理时请检查FFmpeg的输出信息以获取可能的错误提示。
-```
+
 
 仓库代码
 [AIDrow](https:\\github.com\qingyun201908\AIDrowToVideo)
