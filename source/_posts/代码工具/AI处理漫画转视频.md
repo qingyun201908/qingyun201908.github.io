@@ -256,7 +256,7 @@ if __name__ == "__main__":
 ## 注意事项
 - 确保PDF文件路径正确。
 - 输出文件夹将自动创建，若已存在则会被忽略。
-```
+
 
 # 图片信息剪裁
 ```python
@@ -441,9 +441,7 @@ batch_crop_images(input_folder, output_folder, top, bottom)
 ## 注意事项
 - 确保输入文件夹中存在支持的图片格式。
 - 裁剪区域的上边界和下边界应确保合理，以避免裁剪超出图片范围。
-```
 
-以上是对代码的详细解析及生成的Markdown文件内容，您可以根据需要进行调整和使用。
 # OCR识别处理图片，获取漫画对应的文本信息
 ```python
 import easyocr
@@ -775,7 +773,7 @@ total = len([f for f in os.listdir(input_folder) if any(f.endswith(ext) for ext 
 ## 注意事项
 - 确保安装了支持CUDA的PyTorch版本。
 - 确保输入文件夹中存在支持的图片格式。
-```
+
 
 # 运用阿里云通义千文处理提取的文本信息更符合文本语言
 ```python
@@ -1118,7 +1116,7 @@ def process_folder(folder_path):
 ## 注意事项
 - 确保OpenAI API服务可用。
 - 检查文件夹路径和文件权限。
-```
+
 
 # 运用FishVideo大模型将文本信息转变为对应的语音
 ```python
@@ -1394,7 +1392,7 @@ print(f"\n处理完成: 成功 {processed} 个 | 跳过 {skipped} 个 | 失败 {
 ## 注意事项
 - 确保`fish_audio_sdk`的配置正确，API密钥和参考ID有效。
 - 检查文件权限，确保可以读取文本文件和写入音频文件。
-```
+
 # 图片转视频处理将图片与语音结合并添加转场
 ```python
 import os
@@ -1711,7 +1709,7 @@ if __name__ == "__main__":
 ## 注意事项
 - 确保文件夹路径和文件权限正确。
 - 处理时请检查FFmpeg的输出信息以获取错误提示。
-```
+
 
 # 合并视频段
 ```python
