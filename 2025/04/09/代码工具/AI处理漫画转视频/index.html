@@ -19,22 +19,27 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.22.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+    <meta name="description" content="AI处理漫画转视频 第一步 从漫画PDF文件读取图片第二部 图片信息剪裁第三步 OCR识别处理图片，获取漫画对应的文本信息第四步 运用阿里云通义大模型千文处理提取的文本信息更符合文本语言第五步 运用FishVideo大模型将文本信息转变为对应的语音第六步 图片转视频处理将图片与语音结合并添加转场第七步 合并视频段 从PDF文件读取图片12345678910111213141516171819202">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI处理漫画转视频">
+<meta property="og:url" content="http://example.com/2025/04/09/%E4%BB%A3%E7%A0%81%E5%B7%A5%E5%85%B7/AI%E5%A4%84%E7%90%86%E6%BC%AB%E7%94%BB%E8%BD%AC%E8%A7%86%E9%A2%91/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="AI处理漫画转视频 第一步 从漫画PDF文件读取图片第二部 图片信息剪裁第三步 OCR识别处理图片，获取漫画对应的文本信息第四步 运用阿里云通义大模型千文处理提取的文本信息更符合文本语言第五步 运用FishVideo大模型将文本信息转变为对应的语音第六步 图片转视频处理将图片与语音结合并添加转场第七步 合并视频段 从PDF文件读取图片12345678910111213141516171819202">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-04-09T23:32:53.000Z">
+<meta property="article:modified_time" content="2025-04-09T12:25:07.495Z">
 <meta property="article:author" content="Qing Yun">
+<meta property="article:tag" content="代码工具">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2025/04/09/%E4%BB%A3%E7%A0%81%E5%B7%A5%E5%85%B7/AI%E5%A4%84%E7%90%86%E6%BC%AB%E7%94%BB%E8%BD%AC%E8%A7%86%E9%A2%91/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"en","comments":"","permalink":"","path":"index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2025/04/09/%E4%BB%A3%E7%A0%81%E5%B7%A5%E5%85%B7/AI%E5%A4%84%E7%90%86%E6%BC%AB%E7%94%BB%E8%BD%AC%E8%A7%86%E9%A2%91/","path":"2025/04/09/代码工具/AI处理漫画转视频/","title":"AI处理漫画转视频"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Hexo</title>
+<title>AI处理漫画转视频 | Hexo</title>
   
 
 
@@ -64,7 +69,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Hexo</h1>
+      <p class="site-title">Hexo</p>
       <i class="logo-line"></i>
     </a>
   </div>
@@ -86,7 +91,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -99,6 +104,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%8EPDF%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E5%9B%BE%E7%89%87"><span class="nav-number">1.</span> <span class="nav-text">从PDF文件读取图片</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90"><span class="nav-number">1.0.1.</span> <span class="nav-text">代码解析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%BC%E5%85%A5%E5%BA%93"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">导入库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8F%90%E5%8F%96%E5%87%BD%E6%95%B0"><span class="nav-number">1.0.1.2.</span> <span class="nav-text">提取函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E8%BE%93%E5%87%BA%E7%9B%AE%E5%BD%95"><span class="nav-number">1.0.1.2.1.</span> <span class="nav-text">创建输出目录</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%89%93%E5%BC%80PDF%E6%96%87%E4%BB%B6"><span class="nav-number">1.0.1.2.2.</span> <span class="nav-text">打开PDF文件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E8%AE%A1%E6%95%B0%E5%99%A8"><span class="nav-number">1.0.1.2.3.</span> <span class="nav-text">初始化计数器</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%81%8D%E5%8E%86%E6%AF%8F%E4%B8%80%E9%A1%B5"><span class="nav-number">1.0.1.2.4.</span> <span class="nav-text">遍历每一页</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E5%92%8C%E5%A4%84%E7%90%86%E5%9B%BE%E7%89%87"><span class="nav-number">1.0.1.2.5.</span> <span class="nav-text">获取和处理图片</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BF%9D%E5%AD%98%E5%9B%BE%E7%89%87"><span class="nav-number">1.0.1.2.6.</span> <span class="nav-text">保存图片</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%8F%90%E7%A4%BA%E6%88%90%E5%8A%9F%E4%BF%A1%E6%81%AF"><span class="nav-number">1.0.1.2.7.</span> <span class="nav-text">提示成功信息</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%BB%E7%A8%8B%E5%BA%8F%E5%9D%97"><span class="nav-number">1.0.1.3.</span> <span class="nav-text">主程序块</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0"><span class="nav-number">1.0.1.3.1.</span> <span class="nav-text">配置参数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E8%BE%93%E5%87%BA%E6%96%87%E4%BB%B6%E5%A4%B9%E8%B7%AF%E5%BE%84"><span class="nav-number">1.0.1.3.2.</span> <span class="nav-text">自动生成输出文件夹路径</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%89%A7%E8%A1%8C%E6%8F%90%E5%8F%96"><span class="nav-number">1.0.1.3.3.</span> <span class="nav-text">执行提取</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Markdown-%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9"><span class="nav-number">1.0.2.</span> <span class="nav-text">Markdown 文件内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%90%E5%8F%96%E5%87%BD%E6%95%B0-1"><span class="nav-number">1.0.3.</span> <span class="nav-text">提取函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E8%BE%93%E5%87%BA%E7%9B%AE%E5%BD%95-1"><span class="nav-number">1.0.4.</span> <span class="nav-text">创建输出目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%93%E5%BC%80PDF%E6%96%87%E4%BB%B6-1"><span class="nav-number">1.0.5.</span> <span class="nav-text">打开PDF文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E8%AE%A1%E6%95%B0%E5%99%A8-1"><span class="nav-number">1.0.6.</span> <span class="nav-text">初始化计数器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%81%8D%E5%8E%86%E6%AF%8F%E4%B8%80%E9%A1%B5-1"><span class="nav-number">1.0.7.</span> <span class="nav-text">遍历每一页</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E5%92%8C%E5%A4%84%E7%90%86%E5%9B%BE%E7%89%87-1"><span class="nav-number">1.0.8.</span> <span class="nav-text">获取和处理图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%9D%E5%AD%98%E5%9B%BE%E7%89%87-1"><span class="nav-number">1.0.9.</span> <span class="nav-text">保存图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%90%E7%A4%BA%E6%88%90%E5%8A%9F%E4%BF%A1%E6%81%AF-1"><span class="nav-number">1.0.10.</span> <span class="nav-text">提示成功信息</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E7%A8%8B%E5%BA%8F%E5%9D%97-1"><span class="nav-number">1.1.</span> <span class="nav-text">主程序块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E"><span class="nav-number">1.2.</span> <span class="nav-text">使用说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">1.3.</span> <span class="nav-text">注意事项</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90-1"><span class="nav-number">1.3.1.</span> <span class="nav-text">代码解析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%BC%E5%85%A5%E5%BA%93-1"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">导入库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%89%B9%E9%87%8F%E8%A3%81%E5%89%AA%E5%87%BD%E6%95%B0"><span class="nav-number">1.3.1.2.</span> <span class="nav-text">批量裁剪函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%A1%AE%E4%BF%9D%E8%BE%93%E5%87%BA%E6%96%87%E4%BB%B6%E5%A4%B9%E5%AD%98%E5%9C%A8"><span class="nav-number">1.3.1.2.1.</span> <span class="nav-text">确保输出文件夹存在</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%81%8D%E5%8E%86%E8%BE%93%E5%85%A5%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6"><span class="nav-number">1.3.1.2.2.</span> <span class="nav-text">遍历输入文件夹中的所有文件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%89%93%E5%BC%80%E5%92%8C%E8%A3%81%E5%89%AA%E5%9B%BE%E7%89%87"><span class="nav-number">1.3.1.2.3.</span> <span class="nav-text">打开和裁剪图片</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E8%B0%83%E6%95%B4%E8%A3%81%E5%89%AA%E5%8C%BA%E5%9F%9F"><span class="nav-number">1.3.1.2.3.1.</span> <span class="nav-text">动态调整裁剪区域</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E8%A3%81%E5%89%AA%E5%B9%B6%E4%BF%9D%E5%AD%98%E5%9B%BE%E7%89%87"><span class="nav-number">1.3.1.2.3.2.</span> <span class="nav-text">裁剪并保存图片</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B%E8%B0%83%E7%94%A8"><span class="nav-number">1.3.2.</span> <span class="nav-text">示例调用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Markdown-%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9-1"><span class="nav-number">1.3.3.</span> <span class="nav-text">Markdown 文件内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%B9%E9%87%8F%E8%A3%81%E5%89%AA%E5%87%BD%E6%95%B0-1"><span class="nav-number">1.3.4.</span> <span class="nav-text">批量裁剪函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A1%AE%E4%BF%9D%E8%BE%93%E5%87%BA%E6%96%87%E4%BB%B6%E5%A4%B9%E5%AD%98%E5%9C%A8-1"><span class="nav-number">1.3.4.1.</span> <span class="nav-text">确保输出文件夹存在</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%81%8D%E5%8E%86%E8%BE%93%E5%85%A5%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6-1"><span class="nav-number">1.3.4.2.</span> <span class="nav-text">遍历输入文件夹中的所有文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%89%93%E5%BC%80%E5%92%8C%E8%A3%81%E5%89%AA%E5%9B%BE%E7%89%87-1"><span class="nav-number">1.3.4.3.</span> <span class="nav-text">打开和裁剪图片</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E8%B0%83%E6%95%B4%E8%A3%81%E5%89%AA%E5%8C%BA%E5%9F%9F-1"><span class="nav-number">1.3.4.4.</span> <span class="nav-text">动态调整裁剪区域</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A3%81%E5%89%AA%E5%B9%B6%E4%BF%9D%E5%AD%98%E5%9B%BE%E7%89%87-1"><span class="nav-number">1.3.4.5.</span> <span class="nav-text">裁剪并保存图片</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B%E8%B0%83%E7%94%A8-1"><span class="nav-number">1.4.</span> <span class="nav-text">示例调用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E-1"><span class="nav-number">1.5.</span> <span class="nav-text">使用说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-1"><span class="nav-number">1.6.</span> <span class="nav-text">注意事项</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90-2"><span class="nav-number">1.6.1.</span> <span class="nav-text">代码解析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%BC%E5%85%A5%E5%BA%93-2"><span class="nav-number">1.6.1.1.</span> <span class="nav-text">导入库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E5%8C%BA%E5%9F%9F"><span class="nav-number">1.6.1.2.</span> <span class="nav-text">配置区域</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GPU%E4%BC%98%E5%8C%96%E5%8F%82%E6%95%B0"><span class="nav-number">1.6.1.3.</span> <span class="nav-text">GPU优化参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AE%B5%E8%90%BD%E5%90%88%E5%B9%B6%E5%87%BD%E6%95%B0"><span class="nav-number">1.6.1.4.</span> <span class="nav-text">段落合并函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%90%88%E5%B9%B6%E9%80%BB%E8%BE%91"><span class="nav-number">1.6.1.4.1.</span> <span class="nav-text">合并逻辑</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0"><span class="nav-number">1.6.1.5.</span> <span class="nav-text">图像处理函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%AF%BB%E5%8F%96%E5%92%8C%E6%A3%80%E6%9F%A5%E5%9B%BE%E7%89%87"><span class="nav-number">1.6.1.5.1.</span> <span class="nav-text">读取和检查图片</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%89%A7%E8%A1%8COCR"><span class="nav-number">1.6.1.5.2.</span> <span class="nav-text">执行OCR</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BF%9D%E5%AD%98%E7%BB%93%E6%9E%9C"><span class="nav-number">1.6.1.5.3.</span> <span class="nav-text">保存结果</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%86%85%E5%AD%98%E5%9B%9E%E6%94%B6"><span class="nav-number">1.6.1.5.4.</span> <span class="nav-text">内存回收</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%BB%E7%A8%8B%E5%BA%8F%E5%9D%97-2"><span class="nav-number">1.6.1.6.</span> <span class="nav-text">主程序块</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%AA%8C%E8%AF%81CUDA"><span class="nav-number">1.6.1.6.1.</span> <span class="nav-text">验证CUDA</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96Reader"><span class="nav-number">1.6.1.6.2.</span> <span class="nav-text">初始化Reader</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%81%8D%E5%8E%86%E5%A4%84%E7%90%86%E5%9B%BE%E7%89%87"><span class="nav-number">1.6.1.6.3.</span> <span class="nav-text">遍历处理图片</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E6%AF%8F%E5%BC%A0%E5%9B%BE%E7%89%87"><span class="nav-number">1.6.1.6.4.</span> <span class="nav-text">处理每张图片</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%89%93%E5%8D%B0%E5%A4%84%E7%90%86%E7%8A%B6%E6%80%81"><span class="nav-number">1.6.1.6.5.</span> <span class="nav-text">打印处理状态</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Markdown-%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9-2"><span class="nav-number">1.6.2.</span> <span class="nav-text">Markdown 文件内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E5%8C%BA%E5%9F%9F-1"><span class="nav-number">1.6.3.</span> <span class="nav-text">配置区域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GPU%E4%BC%98%E5%8C%96%E5%8F%82%E6%95%B0-1"><span class="nav-number">1.6.4.</span> <span class="nav-text">GPU优化参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AE%B5%E8%90%BD%E5%90%88%E5%B9%B6%E5%87%BD%E6%95%B0-1"><span class="nav-number">1.6.5.</span> <span class="nav-text">段落合并函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0-1"><span class="nav-number">1.6.6.</span> <span class="nav-text">图像处理函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E7%A8%8B%E5%BA%8F%E5%9D%97-3"><span class="nav-number">1.6.7.</span> <span class="nav-text">主程序块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%81%8D%E5%8E%86%E5%A4%84%E7%90%86%E5%9B%BE%E7%89%87-1"><span class="nav-number">1.6.8.</span> <span class="nav-text">遍历处理图片</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E-2"><span class="nav-number">1.7.</span> <span class="nav-text">使用说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-2"><span class="nav-number">1.8.</span> <span class="nav-text">注意事项</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90-3"><span class="nav-number">1.8.1.</span> <span class="nav-text">代码解析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%BC%E5%85%A5%E5%BA%93-3"><span class="nav-number">1.8.1.1.</span> <span class="nav-text">导入库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96OpenAI%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="nav-number">1.8.1.2.</span> <span class="nav-text">初始化OpenAI客户端</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96Excel%E6%96%87%E4%BB%B6"><span class="nav-number">1.8.1.3.</span> <span class="nav-text">初始化Excel文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BF%9D%E5%AD%98%E6%95%B0%E6%8D%AE%E5%88%B0Excel"><span class="nav-number">1.8.1.4.</span> <span class="nav-text">保存数据到Excel</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%89%93%E5%8D%B0%E5%AF%B9%E8%AF%9D"><span class="nav-number">1.8.1.5.</span> <span class="nav-text">打印对话</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%B0%E5%BD%95%E9%94%99%E8%AF%AF%E6%97%A5%E5%BF%97"><span class="nav-number">1.8.1.6.</span> <span class="nav-text">记录错误日志</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E5%8D%95%E4%B8%AA%E6%96%87%E4%BB%B6"><span class="nav-number">1.8.1.7.</span> <span class="nav-text">处理单个文件</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%A3%80%E6%9F%A5%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9"><span class="nav-number">1.8.1.7.1.</span> <span class="nav-text">检查文件内容</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%AF%BB%E5%8F%96%E5%92%8C%E5%A4%84%E7%90%86%E6%96%87%E6%9C%AC"><span class="nav-number">1.8.1.7.2.</span> <span class="nav-text">读取和处理文本</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%B0%83%E7%94%A8OpenAI-API"><span class="nav-number">1.8.1.7.3.</span> <span class="nav-text">调用OpenAI API</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BF%9D%E5%AD%98%E4%BF%AE%E6%94%B9%E5%90%8E%E7%9A%84%E6%96%87%E6%9C%AC"><span class="nav-number">1.8.1.7.4.</span> <span class="nav-text">保存修改后的文本</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E6%95%B4%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-number">1.8.1.8.</span> <span class="nav-text">处理整个文件夹</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%97%A5%E5%BF%97%E8%AE%B0%E5%BD%95"><span class="nav-number">1.8.1.8.1.</span> <span class="nav-text">日志记录</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6"><span class="nav-number">1.8.1.8.2.</span> <span class="nav-text">查找文本文件</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%BB%E7%A8%8B%E5%BA%8F"><span class="nav-number">1.8.1.9.</span> <span class="nav-text">主程序</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Markdown-%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9-3"><span class="nav-number">1.8.2.</span> <span class="nav-text">Markdown 文件内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96OpenAI%E5%AE%A2%E6%88%B7%E7%AB%AF-1"><span class="nav-number">1.8.3.</span> <span class="nav-text">初始化OpenAI客户端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96Excel%E6%96%87%E4%BB%B6-1"><span class="nav-number">1.8.4.</span> <span class="nav-text">初始化Excel文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%9D%E5%AD%98%E6%95%B0%E6%8D%AE%E5%88%B0Excel-1"><span class="nav-number">1.8.5.</span> <span class="nav-text">保存数据到Excel</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%93%E5%8D%B0%E5%AF%B9%E8%AF%9D-1"><span class="nav-number">1.8.6.</span> <span class="nav-text">打印对话</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%B0%E5%BD%95%E9%94%99%E8%AF%AF%E6%97%A5%E5%BF%97-1"><span class="nav-number">1.8.7.</span> <span class="nav-text">记录错误日志</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E5%8D%95%E4%B8%AA%E6%96%87%E4%BB%B6-1"><span class="nav-number">1.8.8.</span> <span class="nav-text">处理单个文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E6%95%B4%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9-1"><span class="nav-number">1.8.9.</span> <span class="nav-text">处理整个文件夹</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E-3"><span class="nav-number">1.9.</span> <span class="nav-text">使用说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-3"><span class="nav-number">1.10.</span> <span class="nav-text">注意事项</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90-4"><span class="nav-number">1.10.1.</span> <span class="nav-text">代码解析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%BC%E5%85%A5%E5%BA%93-4"><span class="nav-number">1.10.1.1.</span> <span class="nav-text">导入库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E6%97%A5%E5%BF%97"><span class="nav-number">1.10.1.2.</span> <span class="nav-text">配置日志</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E7%9B%AE%E5%BD%95%E5%87%BD%E6%95%B0"><span class="nav-number">1.10.1.3.</span> <span class="nav-text">处理目录函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E5%8F%98%E9%87%8F"><span class="nav-number">1.10.1.3.1.</span> <span class="nav-text">初始化变量</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%81%8D%E5%8E%86%E6%96%87%E4%BB%B6"><span class="nav-number">1.10.1.3.2.</span> <span class="nav-text">遍历文件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E6%AF%8F%E4%B8%AA%E6%96%87%E4%BB%B6"><span class="nav-number">1.10.1.3.3.</span> <span class="nav-text">处理每个文件</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E8%AF%BB%E5%8F%96%E6%96%87%E6%9C%AC%E5%86%85%E5%AE%B9"><span class="nav-number">1.10.1.3.3.1.</span> <span class="nav-text">读取文本内容</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E8%B7%B3%E8%BF%87%E7%A9%BA%E6%96%87%E4%BB%B6"><span class="nav-number">1.10.1.3.3.2.</span> <span class="nav-text">跳过空文件</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E7%94%9F%E6%88%90%E8%AF%AD%E9%9F%B3%E6%96%87%E4%BB%B6"><span class="nav-number">1.10.1.3.3.3.</span> <span class="nav-text">生成语音文件</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%88%90%E5%8A%9F%E5%A4%84%E7%90%86"><span class="nav-number">1.10.1.3.3.4.</span> <span class="nav-text">成功处理</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86"><span class="nav-number">1.10.1.3.3.5.</span> <span class="nav-text">错误处理</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E7%BB%9F%E8%AE%A1%E6%8A%A5%E5%91%8A"><span class="nav-number">1.10.1.3.4.</span> <span class="nav-text">输出统计报告</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%BB%E7%A8%8B%E5%BA%8F-1"><span class="nav-number">1.10.1.4.</span> <span class="nav-text">主程序</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Markdown-%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9-4"><span class="nav-number">1.10.2.</span> <span class="nav-text">Markdown 文件内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E6%97%A5%E5%BF%97-1"><span class="nav-number">1.10.3.</span> <span class="nav-text">配置日志</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E7%9B%AE%E5%BD%95%E5%87%BD%E6%95%B0-1"><span class="nav-number">1.10.4.</span> <span class="nav-text">处理目录函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E5%8F%98%E9%87%8F-1"><span class="nav-number">1.10.4.1.</span> <span class="nav-text">初始化变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%81%8D%E5%8E%86%E6%96%87%E4%BB%B6-1"><span class="nav-number">1.10.4.2.</span> <span class="nav-text">遍历文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E6%AF%8F%E4%B8%AA%E6%96%87%E4%BB%B6-1"><span class="nav-number">1.10.4.3.</span> <span class="nav-text">处理每个文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%BB%E5%8F%96%E6%96%87%E6%9C%AC%E5%86%85%E5%AE%B9-1"><span class="nav-number">1.10.4.4.</span> <span class="nav-text">读取文本内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B7%B3%E8%BF%87%E7%A9%BA%E6%96%87%E4%BB%B6-1"><span class="nav-number">1.10.4.5.</span> <span class="nav-text">跳过空文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%9F%E6%88%90%E8%AF%AD%E9%9F%B3%E6%96%87%E4%BB%B6-1"><span class="nav-number">1.10.4.6.</span> <span class="nav-text">生成语音文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E7%BB%9F%E8%AE%A1%E6%8A%A5%E5%91%8A-1"><span class="nav-number">1.10.4.7.</span> <span class="nav-text">输出统计报告</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E-4"><span class="nav-number">1.11.</span> <span class="nav-text">使用说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-4"><span class="nav-number">1.12.</span> <span class="nav-text">注意事项</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90-5"><span class="nav-number">1.12.1.</span> <span class="nav-text">代码解析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%BC%E5%85%A5%E5%BA%93-5"><span class="nav-number">1.12.1.1.</span> <span class="nav-text">导入库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%94%AF%E6%8C%81%E7%9A%84%E6%96%87%E4%BB%B6%E6%89%A9%E5%B1%95%E5%90%8D"><span class="nav-number">1.12.1.2.</span> <span class="nav-text">支持的文件扩展名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE%E9%9F%B3%E9%A2%91%E6%96%87%E4%BB%B6"><span class="nav-number">1.12.1.3.</span> <span class="nav-text">查找音频文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E8%A7%86%E9%A2%91"><span class="nav-number">1.12.1.4.</span> <span class="nav-text">创建视频</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%9E%84%E5%BB%BAFFmpeg%E5%91%BD%E4%BB%A4"><span class="nav-number">1.12.1.4.1.</span> <span class="nav-text">构建FFmpeg命令</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E9%9F%B3%E9%A2%91"><span class="nav-number">1.12.1.4.1.1.</span> <span class="nav-text">添加音频</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E8%AE%BE%E5%AE%9A%E8%A7%86%E9%A2%91%E8%BE%93%E5%87%BA%E5%8F%82%E6%95%B0"><span class="nav-number">1.12.1.4.1.2.</span> <span class="nav-text">设定视频输出参数</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E8%BF%90%E8%A1%8CFFmpeg%E5%91%BD%E4%BB%A4"><span class="nav-number">1.12.1.4.1.3.</span> <span class="nav-text">运行FFmpeg命令</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-number">1.12.1.5.</span> <span class="nav-text">处理文件夹</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%94%B6%E9%9B%86%E5%9B%BE%E7%89%87%E6%96%87%E4%BB%B6"><span class="nav-number">1.12.1.5.1.</span> <span class="nav-text">收集图片文件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E8%BE%93%E5%87%BA%E7%9B%AE%E5%BD%95-2"><span class="nav-number">1.12.1.5.2.</span> <span class="nav-text">创建输出目录</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E6%AF%8F%E4%B8%AA%E5%9B%BE%E7%89%87%E6%96%87%E4%BB%B6"><span class="nav-number">1.12.1.5.3.</span> <span class="nav-text">处理每个图片文件</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%BB%E7%A8%8B%E5%BA%8F-2"><span class="nav-number">1.12.1.6.</span> <span class="nav-text">主程序</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Markdown-%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9-5"><span class="nav-number">1.12.2.</span> <span class="nav-text">Markdown 文件内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%94%AF%E6%8C%81%E7%9A%84%E6%96%87%E4%BB%B6%E6%89%A9%E5%B1%95%E5%90%8D-1"><span class="nav-number">1.12.3.</span> <span class="nav-text">支持的文件扩展名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE%E9%9F%B3%E9%A2%91%E6%96%87%E4%BB%B6-1"><span class="nav-number">1.12.4.</span> <span class="nav-text">查找音频文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E8%A7%86%E9%A2%91-1"><span class="nav-number">1.12.5.</span> <span class="nav-text">创建视频</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9E%84%E5%BB%BAFFmpeg%E5%91%BD%E4%BB%A4-1"><span class="nav-number">1.12.5.1.</span> <span class="nav-text">构建FFmpeg命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E9%9F%B3%E9%A2%91-1"><span class="nav-number">1.12.5.2.</span> <span class="nav-text">添加音频</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E8%A7%86%E9%A2%91%E8%BE%93%E5%87%BA%E5%8F%82%E6%95%B0"><span class="nav-number">1.12.5.3.</span> <span class="nav-text">设置视频输出参数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E5%A4%B9-1"><span class="nav-number">1.12.6.</span> <span class="nav-text">处理文件夹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E7%A8%8B%E5%BA%8F-3"><span class="nav-number">1.12.7.</span> <span class="nav-text">主程序</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E-5"><span class="nav-number">1.13.</span> <span class="nav-text">使用说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-5"><span class="nav-number">1.14.</span> <span class="nav-text">注意事项</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90-6"><span class="nav-number">1.14.1.</span> <span class="nav-text">代码解析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%BC%E5%85%A5%E5%BA%93-6"><span class="nav-number">1.14.1.1.</span> <span class="nav-text">导入库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%90%88%E5%B9%B6%E8%A7%86%E9%A2%91%E5%87%BD%E6%95%B0"><span class="nav-number">1.14.1.2.</span> <span class="nav-text">合并视频函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6"><span class="nav-number">1.14.1.2.1.</span> <span class="nav-text">获取视频文件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%94%9F%E6%88%90FFmpeg%E8%BE%93%E5%85%A5%E5%88%97%E8%A1%A8%E6%96%87%E4%BB%B6"><span class="nav-number">1.14.1.2.2.</span> <span class="nav-text">生成FFmpeg输入列表文件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%89%A7%E8%A1%8CFFmpeg%E5%91%BD%E4%BB%A4"><span class="nav-number">1.14.1.2.3.</span> <span class="nav-text">执行FFmpeg命令</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%B8%85%E7%90%86%E4%B8%B4%E6%97%B6%E6%96%87%E4%BB%B6"><span class="nav-number">1.14.1.2.4.</span> <span class="nav-text">清理临时文件</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B"><span class="nav-number">1.14.2.</span> <span class="nav-text">使用示例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Markdown-%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9-6"><span class="nav-number">1.14.3.</span> <span class="nav-text">Markdown 文件内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%88%E5%B9%B6%E8%A7%86%E9%A2%91%E5%87%BD%E6%95%B0-1"><span class="nav-number">1.14.4.</span> <span class="nav-text">合并视频函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6-1"><span class="nav-number">1.14.4.1.</span> <span class="nav-text">获取视频文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%9F%E6%88%90FFmpeg%E8%BE%93%E5%85%A5%E5%88%97%E8%A1%A8%E6%96%87%E4%BB%B6-1"><span class="nav-number">1.14.4.2.</span> <span class="nav-text">生成FFmpeg输入列表文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%89%A7%E8%A1%8CFFmpeg%E5%91%BD%E4%BB%A4-1"><span class="nav-number">1.14.4.3.</span> <span class="nav-text">执行FFmpeg命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B8%85%E7%90%86%E4%B8%B4%E6%97%B6%E6%96%87%E4%BB%B6-1"><span class="nav-number">1.14.4.4.</span> <span class="nav-text">清理临时文件</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E-6"><span class="nav-number">1.15.</span> <span class="nav-text">使用说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-6"><span class="nav-number">1.16.</span> <span class="nav-text">注意事项</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -138,16 +144,17 @@
 
     </div>
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2025/04/09/%E4%BB%A3%E7%A0%81%E5%B7%A5%E5%85%B7/AI%E5%A4%84%E7%90%86%E6%BC%AB%E7%94%BB%E8%BD%AC%E8%A7%86%E9%A2%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -161,13 +168,13 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="name" content="AI处理漫画转视频 | Hexo">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/04/09/%E4%BB%A3%E7%A0%81%E5%B7%A5%E5%85%B7/AI%E5%A4%84%E7%90%86%E6%BC%AB%E7%94%BB%E8%BD%AC%E8%A7%86%E9%A2%91/" class="post-title-link" itemprop="url">AI处理漫画转视频</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          AI处理漫画转视频
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -190,8 +197,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
-          <p>AI处理漫画转视频</p>
+    <div class="post-body" itemprop="articleBody"><p>AI处理漫画转视频</p>
 <p>第一步 从漫画PDF文件读取图片<br>第二部 图片信息剪裁<br>第三步 OCR识别处理图片，获取漫画对应的文本信息<br>第四步 运用阿里云通义大模型千文处理提取的文本信息更符合文本语言<br>第五步 运用FishVideo大模型将文本信息转变为对应的语音<br>第六步 图片转视频处理将图片与语音结合并添加转场<br>第七步 合并视频段</p>
 <h1 id="从PDF文件读取图片"><a href="#从PDF文件读取图片" class="headerlink" title="从PDF文件读取图片"></a>从PDF文件读取图片</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> fitz  <span class="comment"># PyMuPDF</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">extract_images_from_pdf</span>(<span class="params">pdf_path, output_folder</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    从PDF文件中提取所有图片并按顺序保存到指定文件夹</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    参数:</span></span><br><span class="line"><span class="string">        pdf_path (str): PDF文件路径</span></span><br><span class="line"><span class="string">        output_folder (str): 图片保存目录</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="comment"># 创建输出目录</span></span><br><span class="line">    os.makedirs(output_folder, exist_ok=<span class="literal">True</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 打开PDF文件</span></span><br><span class="line">    doc = fitz.<span class="built_in">open</span>(pdf_path)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 初始化图片计数器</span></span><br><span class="line">    image_count = <span class="number">0</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 遍历每一页</span></span><br><span class="line">    <span class="keyword">for</span> page_num <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(doc)):</span><br><span class="line">        page = doc.load_page(page_num)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 获取当前页所有图片列表</span></span><br><span class="line">        image_list = page.get_images(full=<span class="literal">True</span>)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 遍历当前页的图片</span></span><br><span class="line">        <span class="keyword">for</span> image_index, img <span class="keyword">in</span> <span class="built_in">enumerate</span>(image_list, start=<span class="number">1</span>):</span><br><span class="line">            xref = img[<span class="number">0</span>]  <span class="comment"># 获取图片xref</span></span><br><span class="line">            base_image = doc.extract_image(xref)  <span class="comment"># 提取图片信息</span></span><br><span class="line">            image_data = base_image[<span class="string">&quot;image&quot;</span>]      <span class="comment"># 获取图片二进制数据</span></span><br><span class="line">            ext = base_image[<span class="string">&quot;ext&quot;</span>]               <span class="comment"># 获取图片扩展名</span></span><br><span class="line">            </span><br><span class="line">            <span class="comment"># 生成图片文件名</span></span><br><span class="line">            image_filename = <span class="string">f&quot;image_<span class="subst">&#123;image_count + <span class="number">1</span>&#125;</span>.<span class="subst">&#123;ext&#125;</span>&quot;</span></span><br><span class="line">            image_path = os.path.join(output_folder, image_filename)</span><br><span class="line">            </span><br><span class="line">            <span class="comment"># 保存图片</span></span><br><span class="line">            <span class="keyword">with</span> <span class="built_in">open</span>(image_path, <span class="string">&quot;wb&quot;</span>) <span class="keyword">as</span> img_file:</span><br><span class="line">                img_file.write(image_data)</span><br><span class="line">            </span><br><span class="line">            image_count += <span class="number">1</span></span><br><span class="line">    </span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;成功提取 <span class="subst">&#123;image_count&#125;</span> 张图片到目录: <span class="subst">&#123;output_folder&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    <span class="comment"># 配置参数（根据实际情况修改）</span></span><br><span class="line">    pdf_file = <span class="string">&quot;D:\\BaiduNetdiskDownload\\一-人-之-下第051-100话.pdf&quot;</span>  <span class="comment"># PDF文件路径</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 自动生成输出文件夹路径（PDF文件名 + _images）</span></span><br><span class="line">    base_name = os.path.splitext(os.path.basename(pdf_file))[<span class="number">0</span>]  <span class="comment"># 去除扩展名</span></span><br><span class="line">    folder_name = <span class="string">f&quot;<span class="subst">&#123;base_name&#125;</span>_images&quot;</span>  <span class="comment"># 生成文件夹名称</span></span><br><span class="line">    output_dir = os.path.join(os.path.dirname(pdf_file), folder_name)  <span class="comment"># 完整输出路径</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 执行提取</span></span><br><span class="line">    extract_images_from_pdf(pdf_file, output_dir)</span><br></pre></td></tr></table></figure>
 
@@ -811,7 +817,6 @@
 ![alt text](https:\\raw.githubusercontent.com\qingyun201908\qingyun201908.github.io\images\images\AI处理漫画转视频\image_20250409202305.png)
 </code></pre>
 
-      
     </div>
 
     
@@ -819,496 +824,25 @@
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+          <div class="post-tags">
+              <a href="/tags/%E4%BB%A3%E7%A0%81%E5%B7%A5%E5%85%B7/" rel="tag"># 代码工具</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/04/09/%E4%BB%A3%E7%A0%81%E5%B7%A5%E5%85%B7/watchMOD/" rel="prev" title="杀戮尖塔女巫汉化模组">
+                  <i class="fa fa-angle-left"></i> 杀戮尖塔女巫汉化模组
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
     </footer>
   </article>
 </div>
 
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2025/04/09/%E4%BB%A3%E7%A0%81%E5%B7%A5%E5%85%B7/watchMOD/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Qing Yun">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Hexo">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/04/09/%E4%BB%A3%E7%A0%81%E5%B7%A5%E5%85%B7/watchMOD/" class="post-title-link" itemprop="url">杀戮尖塔女巫汉化模组</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2025-04-09 23:32:53 / Modified: 12:25:07" itemprop="dateCreated datePublished" datetime="2025-04-09T23:32:53+00:00">2025-04-09</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>本仓库为女巫模组的汉化版本，原模组仓库地址：https:\github.com\gygrazok\witchmod</p>
-<h1 id="女巫（The-Witch）"><a href="#女巫（The-Witch）" class="headerlink" title="女巫（The Witch）"></a>女巫（The Witch）</h1><p><strong>杀戮尖塔（Slay The Spire）</strong> 的全新角色模组</p>
-<p>女巫模组为游戏增添了超过 75 张新卡牌和 4 个全新遗物，围绕 <strong>诅咒（Curses）</strong> 展开独特的玩法体验。她的起始遗物 <strong>黑猫（Black Cat）</strong> 每场战斗开始时会在抽牌堆中加入一张临时随机诅咒牌，但每当你抽到诅咒牌时可获得 1 点额外能量。这一机制打破了诅咒牌的传统负面印象，令其在女巫的卡组中可能成为战略优势。</p>
-<p>与铁卫（Ironclad）或寂静猎手（Silent）相比，女巫在游戏初期可能略显脆弱，玩法策略需要一定的探索和练习。希望玩家们能够分享宝贵的意见和建议，以帮助进一步平衡和优化她的游戏体验。</p>
-<p>卡牌详细列表请参见 <a target="_blank" rel="noopener" href="https://docs.google.com/spreadsheets/d/19tAd2g6CMNSAXdArFp2ZNpAosv3Rltb3qv1Cnc40RSk/edit?usp=sharing">此处</a>。</p>
-<h2 id="核心机制"><a href="#核心机制" class="headerlink" title="核心机制"></a>核心机制</h2><ul>
-<li><strong>循环（Recurrent）</strong>：打出后不会进入弃牌堆，而是直接洗回抽牌堆，增强卡组的循环效率。</li>
-<li><strong>净化（Cleanse）</strong>：部分特殊诅咒牌可在战斗中完成特定目标后被“净化”，解锁其隐藏效果，但该效果仅限于当前战斗。</li>
-</ul>
-<h2 id="新增状态效果"><a href="#新增状态效果" class="headerlink" title="新增状态效果"></a>新增状态效果</h2><ul>
-<li><strong>腐烂（Rot）</strong>：类似中毒，每回合对敌方造成伤害，且与中毒不同，腐烂会在每回合自动 <strong>增加</strong> 1 点。</li>
-<li><strong>衰弱（Decrepit）</strong>：使受影响生物承受额外伤害，额外伤害数值取决于衰弱层数，每回合减少 1 层。</li>
-</ul>
-<h1 id="安装指南"><a href="#安装指南" class="headerlink" title="安装指南"></a>安装指南</h1><p>本模组基于 <a target="_blank" rel="noopener" href="https://github.com/gskleres/FruityMod-StS">FruityMod-StS</a> 的安装指南整理，简明易懂，便于快速上手。</p>
-<h2 id="前置要求"><a href="#前置要求" class="headerlink" title="前置要求"></a>前置要求</h2><ul>
-<li>Java 8（JRE）— 仅支持 Java 8，Java 9 兼容性问题尚在处理。</li>
-<li>BaseMod v3.3.0+（<a target="_blank" rel="noopener" href="https://github.com/daviscook477/BaseMod/releases">下载地址</a>）</li>
-<li>ModTheSpire v3.2.0+（<a target="_blank" rel="noopener" href="https://github.com/kiooeht/ModTheSpire/releases">下载地址</a>）</li>
-</ul>
-<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><ol>
-<li>如果已安装 <code>ModTheSpire</code>，可跳至步骤 5。</li>
-<li>从 <a target="_blank" rel="noopener" href="https://github.com/kiooeht/ModTheSpire/releases">此处</a> 下载 <code>ModTheSpire.jar</code></li>
-<li>将 <code>ModTheSpire.jar</code> 移动至 <strong>杀戮尖塔</strong> 目录，路径示例：<br><code>C:\Program Files (x86)\Steam\steamapps\common\SlayTheSpire</code></li>
-<li>在游戏目录中创建 <code>mods</code> 文件夹：<br><code>C:\Program Files (x86)\Steam\steamapps\common\SlayTheSpire\mods</code></li>
-<li>从 <a target="_blank" rel="noopener" href="https://github.com/daviscook477/BaseMod/releases">此处</a> 下载 <code>BaseMod.jar</code></li>
-<li>将 <code>BaseMod.jar</code> 放入 <code>mods</code> 文件夹</li>
-<li>从 <a target="_blank" rel="noopener" href="https://github.com/gygrazok/witchmod/releases">此处</a> 下载 <code>WitchMod.jar</code></li>
-<li>将 <code>WitchMod.jar</code> 同样放入 <code>mods</code> 文件夹</li>
-<li>双击 <code>ModTheSpire.jar</code> 启动游戏</li>
-<li>在模组选择界面勾选 <code>BaseMod</code> 和 <code>WitchMod</code>，点击 <strong>Play</strong> 开始游戏</li>
-</ol>
-<h1 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h1><ul>
-<li>感谢 <a target="_blank" rel="noopener" href="https://www.megacrit.com/"><strong>杀戮尖塔</strong> 官方团队</a>，为我们提供了出色的游戏和模组支持。</li>
-<li>感谢 <a target="_blank" rel="noopener" href="https://github.com/daviscook477">BaseMod</a> 的开发者 test447 及所有贡献者。</li>
-<li>感谢 <a target="_blank" rel="noopener" href="https://github.com/kiooeht">ModTheSpire</a> 的开发者 kiooeht 及贡献者。</li>
-<li>感谢所有提供 Bug 反馈、建议与平衡调整意见的玩家社区成员！</li>
-</ul>
-<h2 id="Github地址"><a href="#Github地址" class="headerlink" title="Github地址"></a>Github地址</h2><p><a target="_blank" rel="noopener" href="https://github.com/qingyun201908">Github</a><br><img src="https://raw.githubusercontent.com/qingyun201908/qingyun201908.github.io/images/images/watchMOD/image_20250409192445.png" alt="alt text"></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2025/04/09/%E6%97%B6%E9%97%B4%E6%B5%81%E9%80%9D/PS%E5%AD%A6%E4%B9%A0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Qing Yun">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Hexo">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/04/09/%E6%97%B6%E9%97%B4%E6%B5%81%E9%80%9D/PS%E5%AD%A6%E4%B9%A0/" class="post-title-link" itemprop="url">学习PS使用教程</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2025-04-09 23:32:53 / Modified: 12:25:07" itemprop="dateCreated datePublished" datetime="2025-04-09T23:32:53+00:00">2025-04-09</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="PS制作手机壁纸和电脑壁纸"><a href="#PS制作手机壁纸和电脑壁纸" class="headerlink" title="PS制作手机壁纸和电脑壁纸"></a>PS制作手机壁纸和电脑壁纸</h1><h2 id="1-思绪来源"><a href="#1-思绪来源" class="headerlink" title="1. 思绪来源"></a>1. 思绪来源</h2><p>找到了一位B站UP，分享了有关于灰原哀的动态壁纸。自身( •̀ ω •́ )也是名侦探柯南的爱好者，在此基础上，萌生了制作壁纸的想法。便在B站上搜寻有关于壁纸制作的教学。找到了一位壁纸分享者的教程<a target="_blank" rel="noopener" href="https://space.bilibili.com/38275995?spm_id_from=333.1387.follow.user_card.click">镜湾湾</a>在此基础上学习些许</p>
-<h2 id="2-前期准备"><a href="#2-前期准备" class="headerlink" title="2. 前期准备"></a>2. 前期准备</h2><p>软件：<br>由于电脑是18年产物，故使用2018年版本的PS<br>素材:<br>个人是在pixiv中手动寻找素材，在github中有提供自动寻找的工具，但是个人使用不太理想。<br>自动化工具（）<a target="_blank" rel="noopener" href="https://github.com/xuejianxianzun/PixivBatchDownloader">自动化</a><br>部分素材如下：<br><img src="https://raw.githubusercontent.com/qingyun201908/qingyun201908.github.io/images/images/PS%E5%AD%A6%E4%B9%A0/84425476_p2.jpg" alt="alt text"><br><img src="https://raw.githubusercontent.com/qingyun201908/qingyun201908.github.io/images/images/PS%E5%AD%A6%E4%B9%A0/110928966_p0_master1200.jpg" alt="alt text"><br><img src="https://raw.githubusercontent.com/qingyun201908/qingyun201908.github.io/images/images/PS%E5%AD%A6%E4%B9%A0/118226727_p2.jpg" alt="alt text"></p>
-<h2 id="3-教学绘制过程"><a href="#3-教学绘制过程" class="headerlink" title="3. 教学绘制过程"></a>3. 教学绘制过程</h2><p>可去看对应的UP主视频</p>
-<h2 id="4-成品如下"><a href="#4-成品如下" class="headerlink" title="4. 成品如下"></a>4. 成品如下</h2><p><img src="https://raw.githubusercontent.com/qingyun201908/qingyun201908.github.io/images/images/PS%E5%AD%A6%E4%B9%A0/%E7%81%B0%E5%8E%9F%E5%93%80-%E5%8A%A8%E6%BC%AB%E8%89%B2%E5%BD%A97-1.png" alt="alt text"><br><img src="https://raw.githubusercontent.com/qingyun201908/qingyun201908.github.io/images/images/PS%E5%AD%A6%E4%B9%A0/%E7%81%B0%E5%8E%9F%E5%93%80--%E5%8A%A8%E6%BC%AB%E8%89%B2%E5%BD%A91@1,5x.png" alt="alt text"><br><img src="https://raw.githubusercontent.com/qingyun201908/qingyun201908.github.io/images/images/PS%E5%AD%A6%E4%B9%A0/%E7%81%B0%E5%8E%9F%E5%93%80--%E5%8A%A8%E6%BC%AB%E8%89%B2%E5%BD%A92_20250409180338.png" alt="alt text"><br><img src="https://raw.githubusercontent.com/qingyun201908/qingyun201908.github.io/images/images/PS%E5%AD%A6%E4%B9%A0/%E7%81%B0%E5%8E%9F%E5%93%80--%E5%8A%A8%E6%BC%AB%E8%89%B2%E5%BD%A93_20250409180343.png" alt="alt text"><br><img src="https://raw.githubusercontent.com/qingyun201908/qingyun201908.github.io/images/images/PS%E5%AD%A6%E4%B9%A0/%E7%81%B0%E5%8E%9F%E5%93%80-%E5%8A%A8%E6%BC%AB%E8%89%B2%E5%BD%A94-1_20250409180347.png" alt="alt text"><br><img src="https://raw.githubusercontent.com/qingyun201908/qingyun201908.github.io/images/images/PS%E5%AD%A6%E4%B9%A0/%E7%81%B0%E5%8E%9F%E5%93%80-%E5%8A%A8%E6%BC%AB%E8%89%B2%E5%BD%A94-2.png" alt="alt text"><br><img src="https://raw.githubusercontent.com/qingyun201908/qingyun201908.github.io/images/images/PS%E5%AD%A6%E4%B9%A0/%E7%81%B0%E5%8E%9F%E5%93%80-%E5%8A%A8%E6%BC%AB%E8%89%B2%E5%BD%A95-1.png" alt="alt text"><br><img src="https://raw.githubusercontent.com/qingyun201908/qingyun201908.github.io/images/images/PS%E5%AD%A6%E4%B9%A0/%E7%81%B0%E5%8E%9F%E5%93%80-%E5%8A%A8%E6%BC%AB%E8%89%B2%E5%BD%A95-2.png" alt="alt text"><br><img src="https://raw.githubusercontent.com/qingyun201908/qingyun201908.github.io/images/images/PS%E5%AD%A6%E4%B9%A0/%E7%81%B0%E5%8E%9F%E5%93%80-%E5%8A%A8%E6%BC%AB%E8%89%B2%E5%BD%A96-1.png" alt="alt text"></p>
-<h2 id="5-附带产物"><a href="#5-附带产物" class="headerlink" title="5.附带产物"></a>5.附带产物</h2><p>帮忙做的高考志愿报名<br><img src="https://raw.githubusercontent.com/qingyun201908/qingyun201908.github.io/images/images/PS%E5%AD%A6%E4%B9%A0/%E9%AB%98%E8%80%83%E5%BF%97%E6%84%BF.png" alt="alt text"></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2025/03/06/%E4%BB%A3%E7%A0%81%E5%B7%A5%E5%85%B7/%E8%87%AA%E5%8A%A8%E5%8C%96%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E5%B7%A5%E5%85%B7/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Qing Yun">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Hexo">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/03/06/%E4%BB%A3%E7%A0%81%E5%B7%A5%E5%85%B7/%E8%87%AA%E5%8A%A8%E5%8C%96%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E5%B7%A5%E5%85%B7/" class="post-title-link" itemprop="url">自动化图床工具使用文档</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2025-03-06 23:32:53" itemprop="dateCreated datePublished" datetime="2025-03-06T23:32:53+00:00">2025-03-06</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2025-04-09 12:25:07" itemprop="dateModified" datetime="2025-04-09T12:25:07+00:00">2025-04-09</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="自动化-Markdown-图片上传到-GitHub"><a href="#自动化-Markdown-图片上传到-GitHub" class="headerlink" title="自动化 Markdown 图片上传到 GitHub"></a>自动化 Markdown 图片上传到 GitHub</h1><h2 id="1-代码介绍"><a href="#1-代码介绍" class="headerlink" title="1. 代码介绍"></a>1. 代码介绍</h2><p>本代码用于自动扫描指定目录下的 Markdown 文章，提取其中的本地图片，并上传到 GitHub 仓库，最后替换文章中的图片路径，实现图片的托管和访问加速。</p>
-<h2 id="2-主要功能"><a href="#2-主要功能" class="headerlink" title="2. 主要功能"></a>2. 主要功能</h2><ul>
-<li>读取本地配置文件，加载 GitHub Token</li>
-<li>扫描 Markdown 文章，查找本地图片</li>
-<li>判断图片是否已处理，避免重复上传</li>
-<li>将图片上传到 GitHub 指定仓库和分支</li>
-<li>更新 Markdown 文章中的图片链接</li>
-<li>记录处理过的文件哈希值，避免重复处理</li>
-</ul>
-<h2 id="3-代码解析"><a href="#3-代码解析" class="headerlink" title="3. 代码解析"></a>3. 代码解析</h2><h3 id="3-1-配置文件管理"><a href="#3-1-配置文件管理" class="headerlink" title="3.1 配置文件管理"></a>3.1 配置文件管理</h3><p>代码首先定义了 <code>CONFIG_FILE</code> 路径 (<code>~\.image_upload_config.json</code>)，用于存储 GitHub Token。然后 <code>load_github_token()</code> 函数用于读取该文件，并获取 <code>GITHUB_TOKEN</code>。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">CONFIG_FILE = Path.home() \ <span class="string">&quot;.image_upload_config.json&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">load_github_token</span>():</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(CONFIG_FILE, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">            config = json.load(f)</span><br><span class="line">            token = config.get(<span class="string">&quot;GITHUB_TOKEN&quot;</span>)</span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> token:</span><br><span class="line">                <span class="keyword">raise</span> ValueError(<span class="string">&quot;配置文件中缺少GITHUB_TOKEN字段&quot;</span>)</span><br><span class="line">            <span class="keyword">return</span> token</span><br><span class="line">    <span class="keyword">except</span> FileNotFoundError:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;错误：配置文件 <span class="subst">&#123;CONFIG_FILE&#125;</span> 不存在。请创建该文件并包含GITHUB_TOKEN字段。&quot;</span>)</span><br><span class="line">        exit(<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-2-全局配置项"><a href="#3-2-全局配置项" class="headerlink" title="3.2 全局配置项"></a>3.2 全局配置项</h3><p>定义了 <code>CONFIG</code> 字典，包含 GitHub 仓库信息、文章目录、允许的图片格式等。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">CONFIG = &#123;</span><br><span class="line">    <span class="string">&quot;GITHUB_TOKEN&quot;</span>: load_github_token(),</span><br><span class="line">    <span class="string">&quot;REPO&quot;</span>: <span class="string">&quot;qingyun201908\qingyun201908.github.io&quot;</span>,</span><br><span class="line">    <span class="string">&quot;BRANCH&quot;</span>: <span class="string">&quot;images&quot;</span>,</span><br><span class="line">    <span class="string">&quot;POSTS_DIR&quot;</span>: Path(<span class="string">r&quot;D:\\2025Blog\\my-blog\\source\\_posts&quot;</span>),</span><br><span class="line">    <span class="string">&quot;ALLOWED_EXTENSIONS&quot;</span>: &#123;<span class="string">&#x27;.jpg&#x27;</span>, <span class="string">&#x27;.jpeg&#x27;</span>, <span class="string">&#x27;.png&#x27;</span>, <span class="string">&#x27;.gif&#x27;</span>, <span class="string">&#x27;.bmp&#x27;</span>, <span class="string">&#x27;.webp&#x27;</span>&#125;,</span><br><span class="line">    <span class="string">&quot;HASH_STORE&quot;</span>: Path.home() \ <span class="string">&quot;.image_upload_processed&quot;</span>,</span><br><span class="line">    <span class="string">&quot;LOCAL_IMAGES_DIR&quot;</span>: <span class="literal">None</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-3-文件处理管理"><a href="#3-3-文件处理管理" class="headerlink" title="3.3 文件处理管理"></a>3.3 文件处理管理</h3><h4 id="3-3-1-FileProcessor-类"><a href="#3-3-1-FileProcessor-类" class="headerlink" title="3.3.1 FileProcessor 类"></a>3.3.1 <code>FileProcessor</code> 类</h4><ul>
-<li>负责初始化 GitHub 连接</li>
-<li>读取和存储已处理的文件哈希值</li>
-<li>遍历 Markdown 目录，逐个处理文章</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">FileProcessor</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="variable language_">self</span>.processed = <span class="variable language_">self</span>.load_processed()</span><br><span class="line">        <span class="variable language_">self</span>.repo = <span class="variable language_">self</span>.init_github()</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;成功连接仓库: <span class="subst">&#123;self.repo.full_name&#125;</span>\n&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<h4 id="3-3-2-计算文件哈希值"><a href="#3-3-2-计算文件哈希值" class="headerlink" title="3.3.2 计算文件哈希值"></a>3.3.2 计算文件哈希值</h4><p>用于检查文章是否修改过，避免重复处理。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">calculate_hash</span>(<span class="params">self, filepath</span>):</span><br><span class="line">    hasher = hashlib.sha256()</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(filepath, <span class="string">&#x27;rb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">        <span class="keyword">while</span> chunk := f.read(<span class="number">8192</span>):</span><br><span class="line">            hasher.update(chunk)</span><br><span class="line">    <span class="keyword">return</span> hasher.hexdigest()</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-4-文章处理"><a href="#3-4-文章处理" class="headerlink" title="3.4 文章处理"></a>3.4 文章处理</h3><h4 id="3-4-1-ArticleProcessor-类"><a href="#3-4-1-ArticleProcessor-类" class="headerlink" title="3.4.1 ArticleProcessor 类"></a>3.4.1 <code>ArticleProcessor</code> 类</h4><ul>
-<li>解析 Markdown 文件，查找图片链接</li>
-<li>处理本地图片（检查路径、上传到 GitHub）</li>
-<li>替换 Markdown 文章中的本地图片路径</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">process_images</span>(<span class="params">self</span>):</span><br><span class="line">    matches = re.findall(<span class="string">&quot;!\[.*?\]\((.*?)\)&quot;</span>, <span class="variable language_">self</span>.content)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;发现 <span class="subst">&#123;<span class="built_in">len</span>(matches)&#125;</span> 个图片引用&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> local_path <span class="keyword">in</span> matches:</span><br><span class="line">        <span class="variable language_">self</span>.process_single_image(local_path)</span><br></pre></td></tr></table></figure>
-
-<h4 id="3-4-2-上传图片到-GitHub"><a href="#3-4-2-上传图片到-GitHub" class="headerlink" title="3.4.2 上传图片到 GitHub"></a>3.4.2 上传图片到 GitHub</h4><ul>
-<li>先检查 GitHub 仓库中是否已存在相同文件</li>
-<li>如果文件已存在且内容一致，则直接复用 URL</li>
-<li>否则更新或创建新的图片文件</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">upload_image</span>(<span class="params">self, image_path</span>):</span><br><span class="line">    image_name = image_path.name</span><br><span class="line">    remote_path = <span class="string">f&quot;images\&#123;self.article_folder&#125;\&#123;image_name&#125;&quot;</span></span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(image_path, <span class="string">&#x27;rb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">        content = f.read()</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        existing = <span class="variable language_">self</span>.manager.repo.get_contents(remote_path, CONFIG[<span class="string">&quot;BRANCH&quot;</span>])</span><br><span class="line">        <span class="keyword">if</span> existing.decoded_content == content:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;图片已存在，跳过上传: <span class="subst">&#123;remote_path&#125;</span>&quot;</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="string">f&quot;<span class="subst">&#123;CONFIG[<span class="string">&#x27;BASE_URL&#x27;</span>]&#125;</span><span class="subst">&#123;remote_path&#125;</span>&quot;</span></span><br><span class="line">        <span class="variable language_">self</span>.manager.repo.update_file(</span><br><span class="line">            path=remote_path,</span><br><span class="line">            message=<span class="string">f&quot;Update image: <span class="subst">&#123;remote_path&#125;</span>&quot;</span>,</span><br><span class="line">            content=content,</span><br><span class="line">            sha=existing.sha,</span><br><span class="line">            branch=CONFIG[<span class="string">&quot;BRANCH&quot;</span>]</span><br><span class="line">        )</span><br><span class="line">    <span class="keyword">except</span> Exception:</span><br><span class="line">        <span class="variable language_">self</span>.manager.repo.create_file(</span><br><span class="line">            path=remote_path,</span><br><span class="line">            message=<span class="string">f&quot;Add image: <span class="subst">&#123;remote_path&#125;</span>&quot;</span>,</span><br><span class="line">            content=content,</span><br><span class="line">            branch=CONFIG[<span class="string">&quot;BRANCH&quot;</span>]</span><br><span class="line">        )</span><br><span class="line">    <span class="keyword">return</span> <span class="string">f&quot;<span class="subst">&#123;CONFIG[<span class="string">&#x27;BASE_URL&#x27;</span>]&#125;</span><span class="subst">&#123;remote_path&#125;</span>&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="3-5-运行主程序"><a href="#3-5-运行主程序" class="headerlink" title="3.5 运行主程序"></a>3.5 运行主程序</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    CONFIG[<span class="string">&quot;POSTS_DIR&quot;</span>] = Path(CONFIG[<span class="string">&quot;POSTS_DIR&quot;</span>])</span><br><span class="line">    CONFIG[<span class="string">&quot;LOCAL_IMAGES_DIR&quot;</span>] = CONFIG[<span class="string">&quot;POSTS_DIR&quot;</span>].parent \ <span class="string">&quot;images&quot;</span></span><br><span class="line">    CONFIG[<span class="string">&quot;BASE_URL&quot;</span>] = <span class="string">f&quot;https:\\raw.githubusercontent.com\&#123;CONFIG[&#x27;REPO&#x27;]&#125;\&#123;CONFIG[&#x27;BRANCH&#x27;]&#125;\&quot;</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    processor = FileProcessor()</span></span><br><span class="line"><span class="string">    processor.process_directory()</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="4-运行方式"><a href="#4-运行方式" class="headerlink" title="4. 运行方式"></a>4. 运行方式</h2><ol>
-<li>在 <code>~\.image_upload_config.json</code> 中配置 GitHub Token： <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;GITHUB_TOKEN&quot;</span><span class="punctuation">:</span> <span class="string">&quot;your_github_personal_access_token&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure></li>
-<li>修改 <code>CONFIG</code> 变量，指定 GitHub 仓库和本地 Markdown 目录。</li>
-<li>运行 Python 脚本： <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python script.py</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h2 id="5-总结"><a href="#5-总结" class="headerlink" title="5. 总结"></a>5. 总结</h2><p>本代码通过解析 Markdown 文件，自动上传本地图片到 GitHub，并更新文章内容，使得图片可以通过 GitHub 进行托管，适用于 Hexo 或 Jekyll 博客的自动化部署。</p>
-<p><img src="https://raw.githubusercontent.com/qingyun201908/qingyun201908.github.io/images/images/%E8%87%AA%E5%8A%A8%E5%8C%96%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E5%B7%A5%E5%85%B7/image.png" alt="alt text"></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2025/03/05/%E6%97%B6%E9%97%B4%E6%B5%81%E9%80%9D/%E8%B7%AF%E4%B8%8E%E5%B7%B1-%E6%AD%A3%E4%B8%80%E9%BE%99%E8%99%8E%E5%B1%B1%E5%A4%A9%E5%B8%88%E5%BC%A0%E4%B9%8B%E7%BB%B4/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Qing Yun">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Hexo">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/03/05/%E6%97%B6%E9%97%B4%E6%B5%81%E9%80%9D/%E8%B7%AF%E4%B8%8E%E5%B7%B1-%E6%AD%A3%E4%B8%80%E9%BE%99%E8%99%8E%E5%B1%B1%E5%A4%A9%E5%B8%88%E5%BC%A0%E4%B9%8B%E7%BB%B4/" class="post-title-link" itemprop="url">路与己-正一龙虎山天师张之维</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2025-03-05 23:25:13" itemprop="dateCreated datePublished" datetime="2025-03-05T23:25:13+00:00">2025-03-05</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2025-04-09 12:25:07" itemprop="dateModified" datetime="2025-04-09T12:25:07+00:00">2025-04-09</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%97%B6%E9%97%B4%E6%B5%81%E9%80%9D/" itemprop="url" rel="index"><span itemprop="name">时间流逝</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="路与己"><a href="#路与己" class="headerlink" title="路与己"></a>路与己</h3><p>张之维：脚在你身上长着，走不走，走哪条路，走什么样的路，做不做人，做什么样的人，亦是如此。</p>
-<p>夏禾：太多时候，你我的模样是别人决定的。</p>
-<p>张之维：是啊！想走的路不好走，想做人不好做。都说是身不由己，那不是废话嘛，己不由心，身又岂能由己。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/13/%E6%97%B6%E9%97%B4%E6%B5%81%E9%80%9D/%E5%86%99%E5%9C%A8%E6%97%B6%E9%97%B4%E4%B9%8B%E5%A4%96%E7%9A%84%E5%BE%80%E4%BA%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Qing Yun">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Hexo">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/12/13/%E6%97%B6%E9%97%B4%E6%B5%81%E9%80%9D/%E5%86%99%E5%9C%A8%E6%97%B6%E9%97%B4%E4%B9%8B%E5%A4%96%E7%9A%84%E5%BE%80%E4%BA%8B/" class="post-title-link" itemprop="url">写在时间之外的往事</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-12-13 10:48:02" itemprop="dateCreated datePublished" datetime="2021-12-13T10:48:02+00:00">2021-12-13</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2025-04-09 12:25:07" itemprop="dateModified" datetime="2025-04-09T12:25:07+00:00">2025-04-09</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%97%B6%E9%97%B4%E6%B5%81%E9%80%9D/" itemprop="url" rel="index"><span itemprop="name">时间流逝</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%97%B6%E9%97%B4%E6%B5%81%E9%80%9D/%E8%BF%87%E5%BE%80/" itemprop="url" rel="index"><span itemprop="name">过往</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="写在生活之外的往事"><a href="#写在生活之外的往事" class="headerlink" title="写在生活之外的往事"></a>写在生活之外的往事</h3><h4 id="一：为什么不想考研"><a href="#一：为什么不想考研" class="headerlink" title="一：为什么不想考研"></a>一：为什么不想考研</h4><p>没有能力，没有热情，很多时候都不知道自己想去做什么，只是浑浑噩噩的过日子。</p>
-<h4 id="二：对不起的人"><a href="#二：对不起的人" class="headerlink" title="二：对不起的人"></a>二：对不起的人</h4><p>于父母有愧，二老对我没太大要求，只是渴望我有更好的发展，不被人欺负，不受气</p>
-<h4 id="三：担心害怕的事情"><a href="#三：担心害怕的事情" class="headerlink" title="三：担心害怕的事情"></a>三：担心害怕的事情</h4><p>害怕对不起父母，但是自己又不愿意去承担，假如亲近之人生病，我又该怎么办？没钱，没能力。</p>
-<h4 id="四：对待社会"><a href="#四：对待社会" class="headerlink" title="四：对待社会"></a>四：对待社会</h4><p>不怎么喜欢、社会千奇百怪，光怪陆离，就像在地狱一样。</p>
-<h4 id="五：为什么写这些？"><a href="#五：为什么写这些？" class="headerlink" title="五：为什么写这些？"></a>五：为什么写这些？</h4><p>我没抑郁症，也没想不开，只是记录下，想着一些事情，就在这里留下！</p>
-<h4 id="六：想着依年为单位去完成一些东西"><a href="#六：想着依年为单位去完成一些东西" class="headerlink" title="六：想着依年为单位去完成一些东西"></a>六：想着依年为单位去完成一些东西</h4><p>时间不等人，落叶于枫树飘零，但不知以年为单位的任务，是否能带来改变</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
 
 
 
