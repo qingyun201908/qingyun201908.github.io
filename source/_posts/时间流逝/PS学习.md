@@ -21,9 +21,9 @@ tags: PS图集
 ## 4. 成品如下
 ![alt text](https:\\raw.githubusercontent.com\qingyun201908\qingyun201908.github.io\images\images\PS学习\灰原哀-动漫色彩7-1.png) 
 ![alt text](https:\\raw.githubusercontent.com\qingyun201908\qingyun201908.github.io\images\images\PS学习\灰原哀--动漫色彩1@1,5x.png) 
-![alt text](灰原哀--动漫色彩2.png) 
-![alt text](灰原哀--动漫色彩3.png) 
-![alt text](灰原哀-动漫色彩4-1.png) 
+![alt text](https:\\raw.githubusercontent.com\qingyun201908\qingyun201908.github.io\images\images\PS学习\灰原哀--动漫色彩2_20250409180338.png) 
+![alt text](https:\\raw.githubusercontent.com\qingyun201908\qingyun201908.github.io\images\images\PS学习\灰原哀--动漫色彩3_20250409180343.png) 
+![alt text](https:\\raw.githubusercontent.com\qingyun201908\qingyun201908.github.io\images\images\PS学习\灰原哀-动漫色彩4-1_20250409180347.png) 
 ![alt text](https:\\raw.githubusercontent.com\qingyun201908\qingyun201908.github.io\images\images\PS学习\灰原哀-动漫色彩4-2.png) 
 ![alt text](https:\\raw.githubusercontent.com\qingyun201908\qingyun201908.github.io\images\images\PS学习\灰原哀-动漫色彩5-1.png) 
 ![alt text](https:\\raw.githubusercontent.com\qingyun201908\qingyun201908.github.io\images\images\PS学习\灰原哀-动漫色彩5-2.png)
