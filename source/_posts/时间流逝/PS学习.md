@@ -13,21 +13,21 @@ tags: PS图集
 个人是在pixiv中手动寻找素材，在github中有提供自动寻找的工具，但是个人使用不太理想。
 自动化工具（）[自动化](https:\\github.com\xuejianxianzun\PixivBatchDownloader)
 部分素材如下：
-![alt text](https:\\raw.githubusercontent.com\qingyun201908\qingyun201908.github.io\images\images\PS学习\84425476_p0_master1200.jpg)
-![alt text](https:\\raw.githubusercontent.com\qingyun201908\qingyun201908.github.io\images\images\PS学习\84425476_p0_master1200-1.jpg)
-![alt text](https:\\raw.githubusercontent.com\qingyun201908\qingyun201908.github.io\images\images\PS学习\84425476_p0_master1200-2.jpg)
+![alt text](https:\\raw.githubusercontent.com\qingyun201908\qingyun201908.github.io\images\images\PS学习\84425476_p2.jpg)
+![alt text](https:\\raw.githubusercontent.com\qingyun201908\qingyun201908.github.io\images\images\PS学习\110928966_p0_master1200.jpg)
+![alt text](https:\\raw.githubusercontent.com\qingyun201908\qingyun201908.github.io\images\images\PS学习\118226727_p2.jpg)
 ## 3. 教学绘制过程
 可去看对应的UP主视频
 ## 4. 成品如下
-![alt text](https:\\raw.githubusercontent.com\qingyun201908\qingyun201908.github.io\images\images\PS学习\灰原哀--动漫色彩2-1.png)
-![alt text](https:\\raw.githubusercontent.com\qingyun201908\qingyun201908.github.io\images\images\PS学习\灰原哀--动漫色彩2.png)
-![alt text](https:\\raw.githubusercontent.com\qingyun201908\qingyun201908.github.io\images\images\PS学习\灰原哀--动漫色彩3.png)
-![alt text](https:\\raw.githubusercontent.com\qingyun201908\qingyun201908.github.io\images\images\PS学习\灰原哀-动漫色彩4-1.png)
-![alt text](https:\\raw.githubusercontent.com\qingyun201908\qingyun201908.github.io\images\images\PS学习\灰原哀-动漫色彩4-2.png)
-![alt text](https:\\raw.githubusercontent.com\qingyun201908\qingyun201908.github.io\images\images\PS学习\灰原哀-动漫色彩4-2-1.png)
-![alt text](https:\\raw.githubusercontent.com\qingyun201908\qingyun201908.github.io\images\images\PS学习\灰原哀-动漫色彩4-2-2.png)
-![alt text](https:\\raw.githubusercontent.com\qingyun201908\qingyun201908.github.io\images\images\PS学习\灰原哀-动漫色彩4-2-3.png)
-![alt text](https:\\raw.githubusercontent.com\qingyun201908\qingyun201908.github.io\images\images\PS学习\灰原哀-动漫色彩7-1.png)
+![alt text](https:\\raw.githubusercontent.com\qingyun201908\qingyun201908.github.io\images\images\PS学习\灰原哀-动漫色彩7-1.png) 
+![alt text](https:\\raw.githubusercontent.com\qingyun201908\qingyun201908.github.io\images\images\PS学习\灰原哀--动漫色彩1@1,5x.png) 
+![alt text](灰原哀--动漫色彩2.png) 
+![alt text](灰原哀--动漫色彩3.png) 
+![alt text](灰原哀-动漫色彩4-1.png) 
+![alt text](https:\\raw.githubusercontent.com\qingyun201908\qingyun201908.github.io\images\images\PS学习\灰原哀-动漫色彩4-2.png) 
+![alt text](https:\\raw.githubusercontent.com\qingyun201908\qingyun201908.github.io\images\images\PS学习\灰原哀-动漫色彩5-1.png) 
+![alt text](https:\\raw.githubusercontent.com\qingyun201908\qingyun201908.github.io\images\images\PS学习\灰原哀-动漫色彩5-2.png)
+![alt text](https:\\raw.githubusercontent.com\qingyun201908\qingyun201908.github.io\images\images\PS学习\灰原哀-动漫色彩6-1.png)
 ## 5.附带产物
 帮忙做的高考志愿报名
-![alt text](https:\\raw.githubusercontent.com\qingyun201908\qingyun201908.github.io\images\images\PS学习\灰原哀-动漫色彩7-1-1.png)
+![alt text](https:\\raw.githubusercontent.com\qingyun201908\qingyun201908.github.io\images\images\PS学习\高考志愿.png)
