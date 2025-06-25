@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.23.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="24小时留言板核心效果如图所示 代码解析12345678910111213141516171819202122# TodoController 代码解析## 整体架构这是一个基于Spring WebFlux的响应式控制器，结合Redis发布\订阅机制实现实时更新的待办事项系统。关键组件包括：- **TodoRepo**：数据访问层接口- **ReactiveRedisTemplate**：Redi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="24小时留言板">
+<meta property="og:url" content="http://example.com/2025/06/25/%E4%BB%A3%E7%A0%81%E5%B7%A5%E5%85%B7/24%E5%B0%8F%E6%97%B6%E7%95%99%E8%A8%80%E6%9D%BF/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="24小时留言板核心效果如图所示 代码解析12345678910111213141516171819202122# TodoController 代码解析## 整体架构这是一个基于Spring WebFlux的响应式控制器，结合Redis发布\订阅机制实现实时更新的待办事项系统。关键组件包括：- **TodoRepo**：数据访问层接口- **ReactiveRedisTemplate**：Redi">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/qingyun201908/qingyun201908.github.io@images/images/24%E5%B0%8F%E6%97%B6%E7%95%99%E8%A8%80%E6%9D%BF/image.png">
+<meta property="article:published_time" content="2025-06-25T23:32:53.000Z">
+<meta property="article:modified_time" content="2025-06-25T07:20:23.485Z">
+<meta property="article:author" content="Qing Yun">
+<meta property="article:tag" content="代码工具">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/qingyun201908/qingyun201908.github.io@images/images/24%E5%B0%8F%E6%97%B6%E7%95%99%E8%A8%80%E6%9D%BF/image.png">
+
+
+<link rel="canonical" href="http://example.com/2025/06/25/%E4%BB%A3%E7%A0%81%E5%B7%A5%E5%85%B7/24%E5%B0%8F%E6%97%B6%E7%95%99%E8%A8%80%E6%9D%BF/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2025/06/25/%E4%BB%A3%E7%A0%81%E5%B7%A5%E5%85%B7/24%E5%B0%8F%E6%97%B6%E7%95%99%E8%A8%80%E6%9D%BF/","path":"2025/06/25/代码工具/24小时留言板/","title":"24小时留言板"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>24小时留言板 | Hexo</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Hexo</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#24%E5%B0%8F%E6%97%B6%E7%95%99%E8%A8%80%E6%9D%BF"><span class="nav-number">1.</span> <span class="nav-text">24小时留言板</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E6%95%88%E6%9E%9C%E5%A6%82%E5%9B%BE%E6%89%80%E7%A4%BA"><span class="nav-number">1.1.</span> <span class="nav-text">核心效果如图所示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90"><span class="nav-number">1.2.</span> <span class="nav-text">代码解析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E4%BA%8B%E4%BB%B6%E5%B9%BF%E6%92%AD%E6%9C%BA%E5%88%B6"><span class="nav-number">1.3.</span> <span class="nav-text">2. 事件广播机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-SSE%E6%95%B0%E6%8D%AE%E6%B5%81%E6%8E%A5%E5%8F%A3"><span class="nav-number">1.4.</span> <span class="nav-text">3. SSE数据流接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-CRUD%E6%93%8D%E4%BD%9C%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.5.</span> <span class="nav-text">4. CRUD操作实现</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E5%BE%85%E5%8A%9E%E4%BA%8B%E9%A1%B9"><span class="nav-number">1.5.1.</span> <span class="nav-text">创建待办事项</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E5%BE%85%E5%8A%9E%E4%BA%8B%E9%A1%B9"><span class="nav-number">1.5.2.</span> <span class="nav-text">删除待办事项</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E8%A7%86%E5%9B%BE%E6%B8%B2%E6%9F%93%E5%BC%95%E6%93%8E"><span class="nav-number">1.6.</span> <span class="nav-text">5. 视图渲染引擎</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E6%A8%A1%E5%BC%8F%E6%B8%B2%E6%9F%93"><span class="nav-number">1.6.1.</span> <span class="nav-text">查看模式渲染</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BC%96%E8%BE%91%E6%A8%A1%E5%BC%8F%E6%B8%B2%E6%9F%93%EF%BC%88%E6%9C%AA%E4%BD%BF%E7%94%A8%EF%BC%89"><span class="nav-number">1.6.2.</span> <span class="nav-text">编辑模式渲染（未使用）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E5%AE%89%E5%85%A8%E6%9C%BA%E5%88%B6"><span class="nav-number">1.7.</span> <span class="nav-text">6. 安全机制</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E8%AE%A1%E4%BA%AE%E7%82%B9"><span class="nav-number">2.</span> <span class="nav-text">设计亮点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%98%E5%8C%96%E5%BB%BA%E8%AE%AE"><span class="nav-number">3.</span> <span class="nav-text">优化建议</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Qing Yun</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/06/25/%E4%BB%A3%E7%A0%81%E5%B7%A5%E5%85%B7/24%E5%B0%8F%E6%97%B6%E7%95%99%E8%A8%80%E6%9D%BF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Qing Yun">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="24小时留言板 | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          24小时留言板
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2025-06-25 23:32:53 / Modified: 07:20:23" itemprop="dateCreated datePublished" datetime="2025-06-25T23:32:53+00:00">2025-06-25</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="24小时留言板"><a href="#24小时留言板" class="headerlink" title="24小时留言板"></a>24小时留言板</h2><h3 id="核心效果如图所示"><a href="#核心效果如图所示" class="headerlink" title="核心效果如图所示"></a>核心效果如图所示</h3><p><img src="https://cdn.jsdelivr.net/gh/qingyun201908/qingyun201908.github.io@images/images/24%E5%B0%8F%E6%97%B6%E7%95%99%E8%A8%80%E6%9D%BF/image.png" alt="alt text"></p>
+<h3 id="代码解析"><a href="#代码解析" class="headerlink" title="代码解析"></a>代码解析</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># TodoController 代码解析</span></span><br><span class="line"></span><br><span class="line"><span class="section">## 整体架构</span></span><br><span class="line">这是一个基于Spring WebFlux的响应式控制器，结合Redis发布\订阅机制实现实时更新的待办事项系统。关键组件包括：</span><br><span class="line"><span class="bullet">-</span> <span class="strong">**TodoRepo**</span>：数据访问层接口</span><br><span class="line"><span class="bullet">-</span> <span class="strong">**ReactiveRedisTemplate**</span>：Redis响应式操作模板</span><br><span class="line"><span class="bullet">-</span> <span class="strong">**ChannelTopic**</span>：Redis消息通道</span><br><span class="line"><span class="bullet">-</span> <span class="strong">**Sinks.Many**</span>：Project Reactor的事件分发器</span><br><span class="line"></span><br><span class="line"><span class="section">## 核心功能解析</span></span><br><span class="line"></span><br><span class="line"><span class="section">### 1. Redis发布\订阅初始化</span></span><br><span class="line"><span class="code">```java</span></span><br><span class="line"><span class="code">public TodoController(TodoRepo repo, ReactiveRedisTemplate&lt;String, String&gt; redisTemplate) &#123;</span></span><br><span class="line"><span class="code">    this.repo = repo;</span></span><br><span class="line"><span class="code">    this.redisTemplate = redisTemplate;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    redisTemplate.listenTo(todoTopic)</span></span><br><span class="line"><span class="code">            .map(msg -&gt; msg.getMessage())</span></span><br><span class="line"><span class="code">            .filter(message -&gt; !StringUtils.isEmpty(message))</span></span><br><span class="line"><span class="code">            .subscribe(eventSink::tryEmitNext);</span></span><br><span class="line"><span class="code">&#125;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>功能</strong>：控制器启动时自动订阅Redis频道</li>
+<li><strong>处理流程</strong>：<ol>
+<li>监听<code>todo_events</code>频道</li>
+<li>提取消息内容</li>
+<li>过滤空消息</li>
+<li>将消息推送到事件流(Sinks)</li>
+</ol>
+</li>
+</ul>
+<h3 id="2-事件广播机制"><a href="#2-事件广播机制" class="headerlink" title="2. 事件广播机制"></a>2. 事件广播机制</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">broadcastEvent</span><span class="params">(String eventType, Todo todo)</span> &#123;</span><br><span class="line">    <span class="type">String</span> <span class="variable">messageId</span> <span class="operator">=</span> <span class="string">&quot;global_&quot;</span> + todo.getId() + <span class="string">&quot;_&quot;</span> + System.currentTimeMillis();</span><br><span class="line">    <span class="type">String</span> <span class="variable">payload</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">    </span><br><span class="line">    \\ 事件类型处理</span><br><span class="line">    <span class="keyword">switch</span> (eventType) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&quot;create&quot;</span>:</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&quot;update&quot;</span>:</span><br><span class="line">            payload = String.format(<span class="string">&quot;id:%s\nevent:%s\ndata:%s\n\n&quot;</span>,</span><br><span class="line">                    messageId, eventType, renderItem(todo));</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&quot;delete&quot;</span>:</span><br><span class="line">            payload = String.format(<span class="string">&quot;id:%s\nevent:delete\ndata:%d\n\n&quot;</span>,</span><br><span class="line">                    messageId, todo.getId());</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    \\ Redis发布</span><br><span class="line">    <span class="keyword">if</span> (StringUtils.hasLength(payload)) &#123;</span><br><span class="line">        redisTemplate.convertAndSend(todoTopic.getTopic(), payload).subscribe();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>事件格式</strong>：符合SSE规范，包含：<ul>
+<li><code>id</code>：全局唯一事件ID（含时间戳）</li>
+<li><code>event</code>：事件类型（create\update\delete）</li>
+<li><code>data</code>：有效载荷</li>
+</ul>
+</li>
+<li><strong>安全设计</strong>：广播前检查消息有效性</li>
+</ul>
+<h3 id="3-SSE数据流接口"><a href="#3-SSE数据流接口" class="headerlink" title="3. SSE数据流接口"></a>3. SSE数据流接口</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@GetMapping(produces = MediaType.TEXT_EVENT_STREAM_VALUE)</span></span><br><span class="line"><span class="keyword">public</span> Flux&lt;String&gt; <span class="title function_">list</span><span class="params">()</span> &#123;</span><br><span class="line">    Flux&lt;String&gt; initialFlux = repo.findAllByOrderByIdDesc()</span><br><span class="line">            .map(todo -&gt; </span><br><span class="line">                String.format(<span class="string">&quot;id:init_%d\nevent:create\ndata:%s\n\n&quot;</span>,</span><br><span class="line">                    todo.getId(), renderItem(todo))</span><br><span class="line">            );</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> Flux.merge(initialFlux, eventSink.asFlux())</span><br><span class="line">            .filter(payload -&gt; !StringUtils.isEmpty(payload));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>实现策略</strong>：<ol>
+<li>加载初始数据并转换为SSE格式（init前缀）</li>
+<li>合并实时事件流（Redis订阅）</li>
+<li>过滤空消息</li>
+</ol>
+</li>
+<li><strong>SSE规范</strong>：<ul>
+<li><code>id: [event_id]</code></li>
+<li><code>event: [event_type]</code></li>
+<li><code>data: [payload]</code></li>
+<li>消息以双换行结束</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-CRUD操作实现"><a href="#4-CRUD操作实现" class="headerlink" title="4. CRUD操作实现"></a>4. CRUD操作实现</h3><h4 id="创建待办事项"><a href="#创建待办事项" class="headerlink" title="创建待办事项"></a>创建待办事项</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@PostMapping</span></span><br><span class="line"><span class="keyword">public</span> Mono&lt;String&gt; <span class="title function_">create</span><span class="params">(<span class="meta">@ModelAttribute</span> Form form)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> repo.save(<span class="keyword">new</span> <span class="title class_">Todo</span>(<span class="literal">null</span>, HtmlUtils.htmlEscape(form.getContent())))</span><br><span class="line">            .doOnSuccess(todo -&gt; broadcastEvent(<span class="string">&quot;create&quot;</span>, todo))</span><br><span class="line">            .thenReturn(<span class="string">&quot;&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>安全特性</strong>：HTML内容转义防御XSS</li>
+<li><strong>响应策略</strong>：空字符串实现PRG(Post-Redirect-Get)模式</li>
+</ul>
+<h4 id="删除待办事项"><a href="#删除待办事项" class="headerlink" title="删除待办事项"></a>删除待办事项</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@PostMapping(path = &quot;\&#123;id&#125;\delete&quot;, produces = MediaType.TEXT_HTML_VALUE)</span></span><br><span class="line"><span class="keyword">public</span> Mono&lt;String&gt; <span class="title function_">delete</span><span class="params">(<span class="meta">@PathVariable</span> Long id)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> repo.findById(id)</span><br><span class="line">            .doOnSuccess(todo -&gt; broadcastEvent(<span class="string">&quot;delete&quot;</span>, todo))</span><br><span class="line">            .then(repo.deleteById(id))</span><br><span class="line">            .thenReturn(<span class="string">&quot;&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>关键流程</strong>：<ol>
+<li>先查询再删除（确保广播正确的todo数据）</li>
+<li>广播删除事件</li>
+<li>执行删除操作</li>
+</ol>
+</li>
+</ul>
+<h3 id="5-视图渲染引擎"><a href="#5-视图渲染引擎" class="headerlink" title="5. 视图渲染引擎"></a>5. 视图渲染引擎</h3><h4 id="查看模式渲染"><a href="#查看模式渲染" class="headerlink" title="查看模式渲染"></a>查看模式渲染</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> String <span class="title function_">renderItem</span><span class="params">(Todo t)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">            &lt;li id=&quot;todo-%d&quot; class=&quot;message-item&quot;&gt;</span></span><br><span class="line"><span class="string">              &lt;div class=&quot;message-content&quot;&gt;</span></span><br><span class="line"><span class="string">                %s</span></span><br><span class="line"><span class="string">                &lt;div class=&quot;message-extra&quot;&gt;</span></span><br><span class="line"><span class="string">                  &lt;div class=&quot;message-time&quot;&gt;&lt;i class=&quot;far fa-clock&quot;&gt;&lt;\i&gt; %s&lt;\div&gt;</span></span><br><span class="line"><span class="string">                &lt;\div&gt;</span></span><br><span class="line"><span class="string">              &lt;\div&gt;</span></span><br><span class="line"><span class="string">              &lt;div class=&quot;message-actions&quot;&gt;</span></span><br><span class="line"><span class="string">                &lt;button class=&quot;delete-btn&quot; onclick=&quot;handleDelete(%d)&quot;&gt;</span></span><br><span class="line"><span class="string">                  &lt;i class=&quot;fas fa-trash-alt&quot;&gt;&lt;\i&gt;</span></span><br><span class="line"><span class="string">                &lt;\button&gt;</span></span><br><span class="line"><span class="string">              &lt;\div&gt;</span></span><br><span class="line"><span class="string">            &lt;\li&gt;</span></span><br><span class="line"><span class="string">            &quot;&quot;&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>元素结构</strong>：<ul>
+<li>唯一ID绑定：<code>todo-&#123;id&#125;</code></li>
+<li>内容显示区</li>
+<li>时间戳（当前服务器时间）</li>
+<li>删除按钮（绑定JavaScript操作）</li>
+</ul>
+</li>
+</ul>
+<h4 id="编辑模式渲染（未使用）"><a href="#编辑模式渲染（未使用）" class="headerlink" title="编辑模式渲染（未使用）"></a>编辑模式渲染（未使用）</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> String <span class="title function_">renderItemEditing</span><span class="params">(Todo t)</span> &#123;</span><br><span class="line">    \\ 包含表单和按钮</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>潜在扩展点</strong>：提供编辑功能时可复用</li>
+</ul>
+<h3 id="6-安全机制"><a href="#6-安全机制" class="headerlink" title="6. 安全机制"></a>6. 安全机制</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">\\ 输入转义</span><br><span class="line">HtmlUtils.htmlEscape(form.getContent())</span><br><span class="line"></span><br><span class="line">\\ 输出转义</span><br><span class="line"><span class="keyword">private</span> String <span class="title function_">escapeHtml</span><span class="params">(String s)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> HtmlUtils.htmlEscape(s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>双保险策略</strong>：输入输出双重转义防御XSS攻击</li>
+<li><strong>规范实践</strong>：使用Spring内置HtmlUtils工具类</li>
+</ul>
+<h2 id="设计亮点"><a href="#设计亮点" class="headerlink" title="设计亮点"></a>设计亮点</h2><ol>
+<li><p><strong>响应式架构</strong>：</p>
+<ul>
+<li>Flux\Mono异步处理</li>
+<li>背压支持(onBackpressureBuffer)</li>
+</ul>
+</li>
+<li><p><strong>实时广播系统</strong>：</p>
+<ul>
+<li>Redis发布\订阅</li>
+<li>多级事件分发(Sinks-&gt;Flux)</li>
+</ul>
+</li>
+<li><p><strong>客户端驱动更新</strong>：</p>
+<ul>
+<li>HTML片段直接注入页面</li>
+<li>无JavaScript框架依赖</li>
+</ul>
+</li>
+<li><p><strong>优雅降级策略</strong>：</p>
+<ul>
+<li>事件ID前缀区分初始化\实时事件</li>
+<li>空消息过滤保证稳定性</li>
+</ul>
+</li>
+<li><p><strong>扩展性设计</strong>：</p>
+<ul>
+<li>事件类型支持(create\update\delete)</li>
+<li>预留编辑模式渲染器</li>
+</ul>
+</li>
+</ol>
+<h2 id="优化建议"><a href="#优化建议" class="headerlink" title="优化建议"></a>优化建议</h2><ol>
+<li><p><strong>时间戳改进</strong>：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">\\ 当前使用服务器当前时间</span><br><span class="line">LocalTime.now().format(DateTimeFormatter.ofPattern(<span class="string">&quot;HH:mm:ss&quot;</span>))</span><br><span class="line"></span><br><span class="line">\\ 建议：使用Todo创建时间</span><br><span class="line">t.getCreatedAt().format(DateTimeFormatter.ofPattern(<span class="string">&quot;HH:mm:ss&quot;</span>))</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>事件完整性保证</strong>：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\\ 增加错误处理</span><br><span class="line">.doOnError(e -&gt; log.error(<span class="string">&quot;Event broadcast failed&quot;</span>, e))</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>集群支持增强</strong>：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">\\ 当前事件ID格式</span><br><span class="line"><span class="string">&quot;global_&quot;</span> + todo.getId() + <span class="string">&quot;_&quot;</span> + System.currentTimeMillis()</span><br><span class="line"></span><br><span class="line">\\ 建议增加实例标识</span><br><span class="line"><span class="string">&quot;node1_&quot;</span> + todo.getId() + <span class="string">&quot;_&quot;</span> + System.currentTimeMillis()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>编辑功能集成</strong>：<br>可启用预留的<code>renderItemEditing</code>方法实现编辑功能</p>
+</li>
+<li><p><strong>自动清理机制</strong>：<br>增加定时任务清理24小时前的待办事项</p>
+</li>
+</ol>
+<p>该系统实现了基于响应式编程和Redis发布\订阅的高效实时应用，兼顾了性能和安全，代码结构清晰且扩展性强，是实时应用开发的优秀范例。</p>
+<pre><code>##GITHUb仓库
+https:\\github.com\qingyun201908\HTMXANDSpringWebflux
+![alt text](https:\\cdn.jsdelivr.net\gh\qingyun201908\qingyun201908.github.io@images\images\24小时留言板\image-1.png)
+</code></pre>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E4%BB%A3%E7%A0%81%E5%B7%A5%E5%85%B7/" rel="tag"># 代码工具</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/04/09/%E4%BB%A3%E7%A0%81%E5%B7%A5%E5%85%B7/AI%E5%A4%84%E7%90%86%E6%BC%AB%E7%94%BB%E8%BD%AC%E8%A7%86%E9%A2%91/" rel="prev" title="AI处理漫画转视频">
+                  <i class="fa fa-angle-left"></i> AI处理漫画转视频
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Qing Yun</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
